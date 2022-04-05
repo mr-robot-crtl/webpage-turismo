@@ -1,5 +1,355 @@
-<html>
-    <body>
-        Home
-    </body>
-</html>
+<!-- PARA QUE PUEDA HEREDAR DE LA CLASE PADRE BASE -->
+{% extends 'webpageApp/base.html' %}
+<!-- QUE CARGUE TODO LO QUE HAY EN LA CARPETA STATIC -->
+{% load static %}
+<!-- PONEMOS TODO NUESTRO CONTENIDO DENTRO DEL CODIGO block PARA Q SE AGREGE ESTRUCTURALMENTE A LA CLASE BASE-->
+{% block content %}
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="row">
+
+                    <div class="owl-carousel owl-theme">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-8 col-sm-12">
+                                             <h3>Bienvenido a Pucallpá</h3>
+                                             <h1>La Tierra colorada</h1>   
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-8 col-sm-12">
+                                             <h3>Respira naturaleza</h3>
+                                             <h1>Maravillate de su hermosos paisajes!</h1>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-8 col-sm-12">
+                                             <h3>Identificate con la naturaleza</h3>
+                                             <h1>Vive la mejor experiencia, con sus mejores atardeceres</h1>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
+     <!-- HISTORY ANTIGUA-->
+     <section id="Hist-antigua" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-6 col-sm-12">   
+                         <div class="H-antigua-info"><!--Historia antigua info-->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                                   <h4>Breve Historia</h4>
+                                   <h2></h2>
+                              </div>
+                              <!--Parrafos-->
+                              <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>Pucallpa (shipibo: May Ushin, «Tierra roja») es una ciudad peruana capital del distrito de Callería y a la vez de la provincia de Coronel Portillo y del departamento de Ucayali. </p>
+                                   <p>Esta categorizada como la única ciudad en el departamento de Ucayali siendo el mayor centro poblado del departamento.</p>
+                                   <P><a href="historyPucallpa.html" target="_parent">VER MAS</a></P>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                              <img src="{% static 'webpageApp/images/historyPucallpa/jungla.jpg' %}" class="img-responsive" alt="">
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+          <!-- History actual -->
+          <section id="Hist-actual" data-stellar-background-ratio="0.5">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-6 col-sm-12">
+                              <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                                   <img src="{% static 'webpageApp/images/historyPucallpa/plaza.jpg' %}" class="img-responsive" alt="">
+                              </div>
+                         </div>
+     
+                         <div class="col-md-6 col-sm-12">
+                              <div class="H-actual-info"> <!--Historia actual info-->
+                                   <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                                        <h4>Breve Historia</h4>
+                                        <h2></h2>
+                                   </div>
+     
+                                   <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                        <p>Pucallpá junto a los demas distritos que lo compones tienen maravillas que ah cualquier entusiaste y amante de la aventura lo dejaran maravillados por sus exuberantes lugares turistos, por sus esquisitas comidas y bebidas que no hallaras en otra parte del mundo</p>
+                                        <p> <a href="historyPucallpa.html" target="_parent">VER MAS</a></p>
+                                   </div>
+                              </div>
+                         </div>
+     
+                    </div>
+               </div>
+          </section>
+
+
+     <!-- GALERIA -->
+     <section id="team" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>MINIGUIA</h2>
+                              <h4>The best of the best De Pucallpa</h4>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="{% static 'webpageApp/images/dia-plaza.jpg' %}" class="img-responsive" alt="">
+                                   <div class="team-hover">
+                                        <div class="team-item">
+                                             <h4>Plaza de armas de Pucallpá</h4> 
+                                        </div>
+                                   </div>
+                         </div>
+                         <div class="team-info">
+                              <h3>ON THE DAY</h3>
+                              <p>Welcome </p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="{% static 'webpageApp/images/tarde-aventura.jpg' %}" class="img-responsive" alt="">
+                                   <div class="team-hover">
+                                        <div class="team-item">
+                                             <h4>Recreo turistico la jungla</h4>
+                                        </div>
+                                   </div>
+                         </div>
+                         <div class="team-info">
+                              <h3>IN THE AFTERNOON</h3>
+                              <p>Welcome</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <img src="{% static 'webpageApp/images/noche-discoteca.jpg' %}" class="img-responsive" alt="">
+                                   <div class="team-hover">
+                                        <div class="team-item">
+                                             <h4>Discoteca nopturna el "Bellaqueo"</h4>
+                                        </div>
+                                   </div>
+                         </div>
+                         <div class="team-info">
+                              <h3>IN THE NIGHT</h3>
+                              <p>Welcome</p>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+     <!-- MENU-->
+     <section id="menu" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>GALERIA</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/Arte.jpg' %}" class="image-popup" title="American Breakfast">
+                                   <img src="{% static 'webpageApp/images/galeria/Arte.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Arte y cultura</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/galeria8.jpg' %}" class="image-popup" title="Self-made Salad">
+                                   <img src="{% static 'webpageApp/images/galeria/galeria8.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Laguna Yarinacocha</h3>                                    
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/paisaje-lupuna.jpg' %}" class="image-popup" title="Chinese Noodle">
+                                   <img src="{% static 'webpageApp/images/galeria/paisaje-lupuna.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Parque la lupuna</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/turismo-Boa.jpg' %}" class="image-popup" title="Rice Soup">
+                                   <img src="{% static 'webpageApp/images/galeria/turismo-Boa.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>La jungla</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/arte-pintura.jpg' %}" class="image-popup" title="Project title">
+                                   <img src="{% static 'webpageApp/images/galeria/arte-pintura.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Arte y cultura</h3>                                            
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/relojPublico.jpg' %}" class="image-popup" title="Project title">
+                                   <img src="{% static 'webpageApp/images/galeria/relojPublico.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Reloj Publico</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/bebidas-masato.jpg' %}" class="image-popup" title="Project title">
+                                   <img src="{% static 'webpageApp/images/galeria/bebidas-masato.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Bebida - Masato</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/comida-Juane.jpg' %}" class="image-popup" title="Project title">
+                                   <img src="{% static 'webpageApp/images/galeria/comida-Juane.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>El rico juane</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href="{% static 'webpageApp/images/galeria/comida-Pescado.jpg' %}" class="image-popup" title="Project title">
+                                   <img src="{% static 'webpageApp/images/galeria/comida-Pescado.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Patarashca</h3>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+
+               </div>
+          </div>
+     </section>
+     <!-- JERGA PUCALLPINA -->
+     <section id="jerga" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>JERGA PUCALLPINA</h2>
+                         </div>
+                    </div>  
+
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                         <div class="owl-carousel owl-theme">
+                              <div class="item">
+                                   <p>No voten basura en Pucallpá no sean chambones</p>
+                                        <div class="tst-author">
+                                             <h4>"Chambon"</h4>
+                                             <span>Persona que entorpese las cosas </span>
+                                        </div>
+                              </div>
+
+                              <div class="item">
+                                   <p>Mister te cuidaddo no vaya entrar en lugares peligrosos o lo pueden dejar calato.</p>
+                                        <div class="tst-author">
+                                             <h4>"Calato"</h4>
+                                             <span>Desnudo, bebé o recién nacido.</span>
+                                        </div>
+                              </div>
+
+                              <div class="item">
+                                   <p>Despues de unas buenas aventuras por Pucallpá no quedarian mal una ricas chelas</p>
+                                        <div class="tst-author">
+                                             <h4>"Chelas"</h4>
+                                             <span>Cerveza</span>
+                                        </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section> 
+{% endblock  %}

@@ -6,7 +6,7 @@ def home(request):
     return render(request, "webpageApp/home.html")
 
 def miniguia(request):
-     return render(request, "webpageApp/mini_guia.html")
+     return render(request, "webpageApp/miniGuia.html")
 
 def lugares(request):
      return render(request, "webpageApp/lugares.html")
