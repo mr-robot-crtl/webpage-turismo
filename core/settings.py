@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webpage'
+    #COLOCAAR EL NAME DE LAS APP PARA QUE CORRA TODAS SUS FUNCIONES
+    'webpage',
+    'Tours',
+    'Places',
 ]
 
 MIDDLEWARE = [

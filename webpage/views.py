@@ -5,11 +5,14 @@ from django.shortcuts import render, HttpResponse
 def home(request):
     return render(request, "webpage/home.html")
 
-def miniguia(request):
-     return render(request, "webpage/miniGuia.html")
+def tours(request):
+     return render(request, "webpage/tours.html")
 
-def lugares(request):
-     return render(request, "webpage/lugares.html")
+def places(request):
+     return render(request, "webpage/places.html")
+
+def services(request):
+     return render(request, "webpage/services.html")
 
 def login(request):
     return render(request, "webpage/login.html")
