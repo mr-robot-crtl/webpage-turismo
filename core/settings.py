@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'webpage',
     'Tours',
     'Places',
+    'Servicess',
 ]
 
 MIDDLEWARE = [

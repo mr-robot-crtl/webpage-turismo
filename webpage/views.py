@@ -11,8 +11,5 @@ def tours(request):
 def places(request):
      return render(request, "webpage/places.html")
 
-def services(request):
-     return render(request, "webpage/services.html")
-
 def login(request):
     return render(request, "webpage/login.html")
