@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Tours',
     'Places',
     'Servicess',
+    'Login',
 ]
 
 MIDDLEWARE = [
