@@ -1,5 +1,5 @@
 <!-- PARA QUE PUEDA HEREDAR DE LA CLASE PADRE BASE -->
-{% extends 'webpage/base.html' %}
+{% extends 'core/base.html' %}
 <!-- QUE CARGUE TODO LO QUE HAY EN LA CARPETA STATIC -->
 {% load static %}
 <!-- PONEMOS TODO NUESTRO CONTENIDO DENTRO DEL CODIGO block PARA Q SE AGREGE ESTRUCTURALMENTE A LA CLASE BASE-->
@@ -44,7 +44,10 @@
                     </div>
           </div>
      </section>
-     <!-- HISTORY ANTIGUA-->
+     
+  
+     {% include "Clima/clima.html" %}
+     <!-- HISTORY ANTIGUA -->
      <section id="Hist-antigua" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
