@@ -1,12 +1,18 @@
-{% extends 'webpage/base.html' %}
+{% extends 'webpage/base2.html' %}
 {% load static %}
 {% block content %}
     <!-- BANER BACKGROUND -->
-    <section id="banner" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-
-    
-    </section>
+    <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Astral<span>Tours</span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="nombre" name="user"><br>
+				<input type="password" placeholder="contraseña" name="password"><br>
+				<input type="button" value="inicia sesion">
+		</div>
 
 {% endblock  %}
 
