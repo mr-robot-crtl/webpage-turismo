@@ -764,88 +764,6 @@ http://www.templatemo.com/tm-515-eatery
     color: #ffffff;
   }*/
 
-
-
-  /*---------------------------------------
-     FOOTER              
-  -----------------------------------------*/
-
-  footer {
-    background-color:#051220;
-  }
-  .fondofooter{
-    background: rgba(0,0,0,0.5);
-    height: 100%;
-    text-align: center;
-  }
-  footer .section-title {
-    padding-bottom: 10px;
-  }
-  #footer h2{
-    font-size: 20px;
-    color: #ffffff;
-
-  }
-
-  footer a,
-  footer p {
-    color: #909090;
-  }
-
-  footer strong {
-    color: #d9d9d9;
-  }
-
-  footer address p {
-    margin-bottom: 0;
-  }
-
-  .footer-info,
-  footer .social-icon {
-    margin-top: 20px;
-  }
-
-  .footer-open-hour {
-    background: #ce3232;
-    background: url('../images/footer-open-hour-bg.jpg') center center no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    margin-top: 0;
-    padding: 40px 0 40px 80px;
-    overflow: hidden;
-    position: relative;
-    z-index: 22;
-    right: 20px;
-    bottom: 20px;
-  }
-
-  .footer-open-hour::after {
-    background: rgba(29,29,29,0.85);
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2222;
-  }
-
-  .footer-open-hour h2 {
-    color: #ffffff;
-  }
-
-  .footer-open-hour p {
-    color: #d9d9d9;
-  }
-
-  .footer-open-hour strong {
-    color: #f9f9f9;
-  }
-
-
-
   /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
@@ -1009,6 +927,16 @@ http://www.templatemo.com/tm-515-eatery
   background-size: cover;
   padding: 9pc;
 }
+
+/*NUESTROS SERVICIOS*/
+.valores-services h3{
+margin-bottom: 20px;
+}
+.iconos-services{
+	font-size: 60px;
+	color: rgb(13 195 201);
+}
+
 
 
 
