@@ -67,7 +67,7 @@
               Esta categorizada como la única ciudad en el departamento de
               Ucayali siendo el mayor centro poblado del departamento.
             </p>
-            <p><a href="historyPucallpa.html" target="_parent">VER MAS</a></p>
+            <p><a href="{% url 'about-pucallpa' %}" target="_parent">VER MAS</a></p>
           </div>
         </div>
       </div>
@@ -79,43 +79,6 @@
             class="img-responsive"
             alt=""
           />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- History actual -->
-<section id="Hist-actual" data-stellar-background-ratio="0.5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
-          <img
-            src="{% static 'webpage/images/historyPucallpa/plaza.jpg' %}"
-            class="img-responsive"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <div class="H-actual-info">
-          <!--Historia actual info-->
-          <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-            <h4>Breve Historia</h4>
-            <h2></h2>
-          </div>
-
-          <div class="wow fadeInUp" data-wow-delay="0.4s">
-            <p>
-              Pucallpá junto a los demas distritos que lo compones tienen
-              maravillas que ah cualquier entusiaste y amante de la aventura lo
-              dejaran maravillados por sus exuberantes lugares turistos, por sus
-              esquisitas comidas y bebidas que no hallaras en otra parte del
-              mundo
-            </p>
-            <p><a href="historyPucallpa.html" target="_parent">VER MAS</a></p>
-          </div>
         </div>
       </div>
     </div>
@@ -407,10 +370,13 @@
       </div>
     </div>
   </div>
+
 </section>
+
+
 <!--      Por que elegir nuestros servicios-->
 <section
-  class="section section-lg bg-gray-lighter novi-background bg-cover text-center wow fadeInUp" data-wow-delay="0.1s"
+  class="section section-lg bg-gray-lighter novi-background bg-cover text-center"
 >
   <div class="valores-services container container-wide">
     <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
@@ -421,7 +387,7 @@
     <div
       class="row row-50 justify-content-sm-center text-left"
     >
-      <div class="col-sm-10 col-md-6 col-xl-3">
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
         <article class="box-minimal box-minimal-border">
           <div class="iconos-services">
             <i class="fa-solid fa-shield-halved"></i>
@@ -437,7 +403,7 @@
           </div>
         </article>
       </div>
-      <div class="col-sm-10 col-md-6 col-xl-3">
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
         <article class="box-minimal box-minimal-border">
           <div class="iconos-services">
             <i class="fa-solid fa-person-hiking"></i>
@@ -454,7 +420,7 @@
           </div>
         </article>
       </div>
-      <div class="col-sm-10 col-md-6 col-xl-3">
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
         <article class="box-minimal box-minimal-border">
           <div class="iconos-services">
             <i class="fa-solid fa-heart-circle-bolt"></i>
@@ -469,7 +435,7 @@
           </div>
         </article>
       </div>
-      <div class="col-sm-10 col-md-6 col-xl-3">
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
         <article class="box-minimal box-minimal-border">
           <div class="iconos-services"><i class="fa-solid fa-hands-holding-circle"></i></div>
           <p class="big box-minimal-title">ESTAS EN BUENAS MANOS</p>
@@ -486,14 +452,14 @@
   </div>
 </section>
 <!-- NUESTROS GUIAS-->
-<section class="section section-lg text-center novi-background bg-cover wow fadeInUp" data-wow-delay="0.5s">
-  <div class="container container-wide">
+<section class="section section-lg text-center novi-background bg-cover">
+  <div class="container container-wide wow fadeInUp" data-wow-delay="0.1s">
     <h3>NUESTROS GUIAS</h3>
     <div class="divider divider-decorate"></div>
     <div
       class="row row-50 row-xxl-90 justify-content-sm-center offset-custom-2"
     >
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-classic team-classic-circle">
           <figure>
             <img
@@ -542,7 +508,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-classic team-classic-circle">
           <figure>
             <img
@@ -591,7 +557,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-classic team-classic-circle">
           <figure>
             <img
@@ -640,7 +606,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-classic team-classic-circle">
           <figure>
             <img
@@ -694,9 +660,9 @@
 </section>
 
 <section
-  class="section section-lg text-center bg-gray-lighter novi-background bg-cover wow fadeInUp" data-wow-delay="0.1s"
+  class="section section-lg text-center bg-gray-lighter novi-background bg-cover"
 >
-  <div class="container container-bigger">
+  <div class="container container-bigger wow fadeInUp" data-wow-delay="0.1s">
     <h3>OPINIONES DE NUESTROS CLIENTES</h3>
     <div class="divider divider-decorate"></div>
     <!-- Owl Carousel-->
@@ -711,7 +677,7 @@
       data-mouse-drag="false"
       data-autoplay="true"
     >
-      <article class="quote-boxed">
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
         <div class="quote-boxed-aside">
           <img
             class="quote-boxed-image"
@@ -720,14 +686,6 @@
             width="210"
             height="210"
           />
-          <p>
-            I wanted to thank you very much for planning the trip to France
-            for my boyfriend and me. It was amazing and exceeded my
-            expectations! We had a wonderful time and were very pleased with
-            the accommodations in Paris and Bayeux. Our private/small tour
-            guides were fantastic! I appreciate all the effort to get us to
-            the Eiffel Tower finally.
-          </p>
         </div>
         <div class="quote-boxed-main">
           <div class="quote-boxed-text">
@@ -746,7 +704,7 @@
           </div>
         </div>
       </article>
-      <article class="quote-boxed">
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
         <div class="quote-boxed-aside">
           <img
             class="quote-boxed-image"
@@ -772,7 +730,7 @@
           </div>
         </div>
       </article>
-      <article class="quote-boxed">
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
         <div class="quote-boxed-aside">
           <img
             class="quote-boxed-image"
@@ -812,7 +770,7 @@
         </div>
       </div>
 
-      <div class="col-md-offset-2 col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-md-offset-2 col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
         <div class="owl-carousel owl-theme">
           <div class="item">
             <p>No voten basura en Pucallpá no sean chambones</p>
