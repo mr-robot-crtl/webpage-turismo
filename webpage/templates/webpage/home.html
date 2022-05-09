@@ -3,76 +3,18 @@
 <!-- QUE CARGUE TODO LO QUE HAY EN LA CARPETA STATIC -->
 {% load static %}
 <!-- PONEMOS TODO NUESTRO CONTENIDO DENTRO DEL CODIGO block PARA Q SE AGREGE ESTRUCTURALMENTE A LA CLASE BASE-->
-{% block content  %}
-     <!-- HOME -->
-     <section id="home" class="slider" data-stellar-background-ratio="0.5">
-          <div class="row">
-
-                    <div class="owl-carousel owl-theme">
-                         <div class="item item-first">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-8 col-sm-12">
-                                             <h3>Bienvenido a Pucallpá</h3>
-                                             <h1>La Tierra colorada</h1>   
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="item item-second">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-8 col-sm-12">
-                                             <h3>Respira naturaleza</h3>
-                                             <h1>Maravillate de su hermosos paisajes!</h1>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="item item-third">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-8 col-sm-12">
-                                             <h3>Identificate con la naturaleza</h3>
-                                             <h1>Vive la mejor experiencia, con sus mejores atardeceres</h1>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-          </div>
-     </section>
-     
-  
-     {% include "Clima/clima.html" %}
-     <!-- HISTORY ANTIGUA -->
-     <section id="Hist-antigua" data-stellar-background-ratio="0.5">
+{% block content %}
+<!-- HOME -->
+<section id="home" class="slider" data-stellar-background-ratio="0.5">
+  <div class="row">
+    <div class="owl-carousel owl-theme">
+      <div class="item item-first">
+        <div class="caption">
           <div class="container">
-               <div class="row">
-                    <div class="col-md-6 col-sm-12">   
-                         <div class="H-antigua-info"><!--Historia antigua info-->
-                              <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-                                   <h4>Breve Historia</h4>
-                                   <h2></h2>
-                              </div>
-                              <!--Parrafos-->
-                              <div class="wow fadeInUp" data-wow-delay="0.4s">
-                                   <p>Pucallpa (shipibo: May Ushin, «Tierra roja») es una ciudad peruana capital del distrito de Callería y a la vez de la provincia de Coronel Portillo y del departamento de Ucayali. </p>
-                                   <p>Esta categorizada como la única ciudad en el departamento de Ucayali siendo el mayor centro poblado del departamento.</p>
-                                   <P><a href="historyPucallpa.html" target="_parent">VER MAS</a></P>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                         <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
-                              <img src="{% static 'webpage/images/historyPucallpa/jungla.jpg' %}" class="img-responsive" alt="">
-                         </div>
-                    </div>
-                    
-               </div>
+            <div class="col-md-8 col-sm-12">
+              <h3>Bienvenido a Pucallpá</h3>
+              <h1>La Tierra colorada</h1>
+            </div>
           </div>
      </section>
           <!-- History actual -->
@@ -285,196 +227,788 @@
                     
                </div>
           </div>
-     </section>
-     <!-- MENU-->
-     <section id="menu" data-stellar-background-ratio="0.5">
+        </div>
+      </div>
+
+      <div class="item item-third">
+        <div class="caption">
           <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>GALERIA</h2>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/Arte.jpg' %}" class="image-popup" title="American Breakfast">
-                                   <img src="{% static 'webpage/images/galeria/Arte.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Arte y cultura</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/galeria8.jpg' %}" class="image-popup" title="Self-made Salad">
-                                   <img src="{% static 'webpage/images/galeria/galeria8.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Laguna Yarinacocha</h3>                                    
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/paisaje-lupuna.jpg' %}" class="image-popup" title="Chinese Noodle">
-                                   <img src="{% static 'webpage/images/galeria/paisaje-lupuna.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Parque la lupuna</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/turismo-Boa.jpg' %}" class="image-popup" title="Rice Soup">
-                                   <img src="{% static 'webpage/images/galeria/turismo-Boa.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>La jungla</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/arte-pintura.jpg' %}" class="image-popup" title="Project title">
-                                   <img src="{% static 'webpage/images/galeria/arte-pintura.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Arte y cultura</h3>                                            
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/relojPublico.jpg' %}" class="image-popup" title="Project title">
-                                   <img src="{% static 'webpage/images/galeria/relojPublico.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Reloj Publico</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/bebidas-masato.jpg' %}" class="image-popup" title="Project title">
-                                   <img src="{% static 'webpage/images/galeria/bebidas-masato.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Bebida - Masato</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/comida-Juane.jpg' %}" class="image-popup" title="Project title">
-                                   <img src="{% static 'webpage/images/galeria/comida-Juane.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>El rico juane</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                              <a href="{% static 'webpage/images/galeria/comida-Pescado.jpg' %}" class="image-popup" title="Project title">
-                                   <img src="{% static 'webpage/images/galeria/comida-Pescado.jpg' %}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Patarashca</h3>
-                                        </div>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-
-               </div>
+            <div class="col-md-8 col-sm-12">
+              <h3>Identificate con la naturaleza</h3>
+              <h1>Vive la mejor experiencia, con sus mejores atardeceres</h1>
+            </div>
           </div>
-     </section>
-     <!-- JERGA PUCALLPINA -->
-     <section id="jerga" data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
-          <div class="container">
-               <div class="row">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>JERGA PUCALLPINA</h2>
-                         </div>
-                    </div>  
-
-                    <div class="col-md-offset-2 col-md-8 col-sm-12">
-                         <div class="owl-carousel owl-theme">
-                              <div class="item">
-                                   <p>No voten basura en Pucallpá no sean chambones</p>
-                                        <div class="tst-author">
-                                             <h4>"Chambon"</h4>
-                                             <span>Persona que entorpese las cosas </span>
-                                        </div>
-                              </div>
-
-                              <div class="item">
-                                   <p>Mister te cuidaddo no vaya entrar en lugares peligrosos o lo pueden dejar calato.</p>
-                                        <div class="tst-author">
-                                             <h4>"Calato"</h4>
-                                             <span>Desnudo, bebé o recién nacido.</span>
-                                        </div>
-                              </div>
-
-                              <div class="item">
-                                   <p>Despues de unas buenas aventuras por Pucallpá no quedarian mal una ricas chelas</p>
-                                        <div class="tst-author">
-                                             <h4>"Chelas"</h4>
-                                             <span>Cerveza</span>
-                                        </div>
-                              </div>
-
-                         </div>
-                    </div>
-
-               </div>
+{% include "Clima/clima.html" %}
+<!-- HISTORY ANTIGUA -->
+<section id="Hist-antigua" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="H-antigua-info">
+          <!--Historia antigua info-->
+          <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+            <h4>Breve Historia</h4>
+            <h2></h2>
           </div>
-     </section> 
-{% endblock  %}
+          <!--Parrafos-->
+          <div class="wow fadeInUp" data-wow-delay="0.4s">
+            <p>
+              Pucallpa (shipibo: May Ushin, «Tierra roja») es una ciudad peruana
+              capital del distrito de Callería y a la vez de la provincia de
+              Coronel Portillo y del departamento de Ucayali.
+            </p>
+            <p>
+              Esta categorizada como la única ciudad en el departamento de
+              Ucayali siendo el mayor centro poblado del departamento.
+            </p>
+            <p><a href="{% url 'about-pucallpa' %}" target="_parent">VER MAS</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="team-thumb wow fadeInUp about-image" data-wow-delay="0.6s">
+          <img
+            src="{% static 'webpage/images/historyPucallpa/jungla.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+          <div class="team-hover">
+            <div class="team-item">
+              <h4>Laguna la Restinga</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="team" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>MINIGUIA</h2>
+          <h4>The best of the best De Pucallpa</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+          <img
+            src="{% static 'webpage/images/dia-plaza.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+          <div class="team-hover">
+            <div class="team-item">
+              <h4>Plaza de armas de Pucallpá</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3>ON THE DAY</h3>
+          <p>Welcome</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+          <img
+            src="{% static 'webpage/images/tarde-aventura.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+          <div class="team-hover">
+            <div class="team-item">
+              <h4>Recreo turistico la jungla</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3>IN THE AFTERNOON</h3>
+          <p>Welcome</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+          <img
+            src="{% static 'webpage/images/noche-discoteca.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+          <div class="team-hover">
+            <div class="team-item">
+              <h4>Discoteca nopturna el "Bellaqueo"</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3>IN THE NIGHT</h3>
+          <p>Welcome</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- MENU-->
+<section id="menu" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>GALERÍA DE DESTINOS</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/Arte.jpg' %}"
+            class="image-popup"
+            title="American Breakfast"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/Arte.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Arte y cultura</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/galeria8.jpg' %}"
+            class="image-popup"
+            title="Self-made Salad"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/galeria8.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Laguna Yarinacocha</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/paisaje-lupuna.jpg' %}"
+            class="image-popup"
+            title="Chinese Noodle"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/paisaje-lupuna.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Parque la lupuna</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/turismo-Boa.jpg' %}"
+            class="image-popup"
+            title="Rice Soup"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/turismo-Boa.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>La jungla</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/arte-pintura.jpg' %}"
+            class="image-popup"
+            title="Project title"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/arte-pintura.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Arte y cultura</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/relojPublico.jpg' %}"
+            class="image-popup"
+            title="Project title"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/relojPublico.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Reloj Publico</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/bebidas-masato.jpg' %}"
+            class="image-popup"
+            title="Project title"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/bebidas-masato.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Bebida - Masato</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/comida-Juane.jpg' %}"
+            class="image-popup"
+            title="Project title"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/comida-Juane.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>El rico juane</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <!-- MENU THUMB -->
+        <div class="menu-thumb">
+          <a
+            href="{% static 'webpage/images/galeria/comida-Pescado.jpg' %}"
+            class="image-popup"
+            title="Project title"
+          >
+            <img
+              src="{% static 'webpage/images/galeria/comida-Pescado.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+
+            <div class="menu-info">
+              <div class="menu-item">
+                <h3>Patarashca</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!--      Por que elegir nuestros servicios-->
+<section
+  class="section section-lg bg-gray-lighter novi-background bg-cover text-center"
+>
+  <div class="valores-services container container-wide">
+    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+      <h2>GALERÍA DE DESTINOS</h2>
+    </div>
+
+    <div class="divider divider-decorate"></div>
+    <div
+      class="row row-50 justify-content-sm-center text-left"
+    >
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <article class="box-minimal box-minimal-border">
+          <div class="iconos-services">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <p class="big box-minimal-title">RESERVE CON CONFIANZA</p>
+          <hr />
+          <div class="box-minimal-text text-spacing-sm">
+            <p>
+              Planifica tus recorridos sin riesgos con el seguro de cancelación
+              de Here Pucallpá. 
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <article class="box-minimal box-minimal-border">
+          <div class="iconos-services">
+            <i class="fa-solid fa-person-hiking"></i>
+          </div>
+          <p class="big box-minimal-title">
+            GUIAS DE CONFIANZA
+          </p>
+          <hr />
+          <div class="box-minimal-text text-spacing-sm">
+            <p>
+              Here Pucallpa cuenta con expertos locales apasionados que
+              conocen nuestros destinos a la perfección.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <article class="box-minimal box-minimal-border">
+          <div class="iconos-services">
+            <i class="fa-solid fa-heart-circle-bolt"></i>
+          </div>
+          <p class="big box-minimal-title">EXCELENTES CRÍTICAS</p>
+          <hr />
+          <div class="box-minimal-text text-spacing-sm">
+            <p>
+              El 97% de nuestros viajeros
+              dicen que nos recomendarían a amigos y familiares.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-10 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <article class="box-minimal box-minimal-border">
+          <div class="iconos-services"><i class="fa-solid fa-hands-holding-circle"></i></div>
+          <p class="big box-minimal-title">ESTAS EN BUENAS MANOS</p>
+          <hr />
+          <div class="box-minimal-text text-spacing-sm">
+            <p>
+              Nuestra línea de ayuda 24/7 significa que estamos a solo una
+              llamada de distancia.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- NUESTROS GUIAS-->
+<section class="section section-lg text-center novi-background bg-cover">
+  <div class="container container-wide wow fadeInUp" data-wow-delay="0.1s">
+    <h3>NUESTROS GUIAS</h3>
+    <div class="divider divider-decorate"></div>
+    <div
+      class="row row-50 row-xxl-90 justify-content-sm-center offset-custom-2"
+    >
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="team-classic team-classic-circle">
+          <figure>
+            <img
+              class="rounded-circle"
+              src="https://www.tasadeparo.com/wp-content/uploads/2010/03/mujertrabajo.jpg"
+              alt=""
+              width="300"
+              height="300"
+            />
+          </figure>
+          <div class="team-classic-caption">
+            <h5><a class="team-classic-title" href="#">Sandra Ferguson</a></h5>
+            <p class="team-classic-job-position">Founder, Director</p>
+            <ul class="list-inline list-team">
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="team-classic team-classic-circle">
+          <figure>
+            <img
+              class="rounded-circle"
+              src="https://orientacion-laboral.infojobs.net/wp-content/uploads/2017/11/9-si-foto-cv.png"
+              alt=""
+              width="300"
+              height="300"
+            />
+          </figure>
+          <div class="team-classic-caption">
+            <h5><a class="team-classic-title" href="#">Ronald Chen</a></h5>
+            <p class="team-classic-job-position">Tour Manager</p>
+            <ul class="list-inline list-team">
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="team-classic team-classic-circle">
+          <figure>
+            <img
+              class="rounded-circle"
+              src="https://economia3.com/wp-content/uploads/2019/12/Natalia-Juarranz-EQUIPO-HUMANO.jpg"
+              alt=""
+              width="300"
+              height="300"
+            />
+          </figure>
+          <div class="team-classic-caption">
+            <h5><a class="team-classic-title" href="#">Frances Watson</a></h5>
+            <p class="team-classic-job-position">Travel Agent</p>
+            <ul class="list-inline list-team">
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="team-classic team-classic-circle">
+          <figure>
+            <img
+              class="rounded-circle"
+              src="https://www.wearetesters.com/wp-content/uploads/2018/05/franciele-cunha-596996-unsplash-1-1080x675.jpg"
+              alt=""
+              width="300"
+              height="300"
+            />
+          </figure>
+          <div class="team-classic-caption">
+            <h5><a class="team-classic-title" href="#">Joe Myers</a></h5>
+            <p class="team-classic-job-position">Reservations Coordinator</p>
+            <ul class="list-inline list-team">
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google-plus"
+                  href="#"
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="section section-lg text-center bg-gray-lighter novi-background bg-cover"
+>
+  <div class="container container-bigger wow fadeInUp" data-wow-delay="0.1s">
+    <h3>OPINIONES DE NUESTROS CLIENTES</h3>
+    <div class="divider divider-decorate"></div>
+    <!-- Owl Carousel-->
+    <div
+      class="owl-carousel owl-layout-1"
+      data-items="1"
+      data-dots="true"
+      data-nav="true"
+      data-stage-padding="0"
+      data-loop="true"
+      data-margin="30"
+      data-mouse-drag="false"
+      data-autoplay="true"
+    >
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
+        <div class="quote-boxed-aside">
+          <img
+            class="quote-boxed-image"
+            src="https://pngimg.com/uploads/birds/small/birds_PNG115.png"
+            alt=""
+            width="210"
+            height="210"
+          />
+        </div>
+        <div class="quote-boxed-main">
+          <div class="quote-boxed-text">
+            <p>
+              I wanted to thank you very much for planning the trip to France
+              for my boyfriend and me. It was amazing and exceeded my
+              expectations! We had a wonderful time and were very pleased with
+              the accommodations in Paris and Bayeux. Our private/small tour
+              guides were fantastic! I appreciate all the effort to get us to
+              the Eiffel Tower finally.
+            </p>
+          </div>
+          <div class="quote-boxed-meta">
+            <p class="quote-boxed-cite">Ann McMillan</p>
+            <p class="quote-boxed-small">Regular Customer</p>
+          </div>
+        </div>
+      </article>
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
+        <div class="quote-boxed-aside">
+          <img
+            class="quote-boxed-image"
+            src="https://pngimg.com/uploads/birds/small/birds_PNG106.png"
+            alt=""
+            width="210"
+            height="210"
+          />
+        </div>
+        <div class="quote-boxed-main">
+          <div class="quote-boxed-text">
+            <p>
+              I had a marvelous time in our travels to Madagascar, Zimbabwe and
+              Botswana, I had just wonderful experiences.I loved the location of
+              the Gorges Camp as I felt like it was only the time we got to see
+              real and rural Africans and how they truly lived. The service was
+              amazing and everyone was very attentive!
+            </p>
+          </div>
+          <div class="quote-boxed-meta">
+            <p class="quote-boxed-cite">Debra Ortega</p>
+            <p class="quote-boxed-small">Regular Customer</p>
+          </div>
+        </div>
+      </article>
+      <article class="quote-boxed wow fadeInUp" data-wow-delay="0.2s">
+        <div class="quote-boxed-aside">
+          <img
+            class="quote-boxed-image"
+            src="https://pngimg.com/uploads/birds/birds_PNG107.png"
+            alt=""
+            width="210"
+            height="210"
+          />
+        </div>
+        <div class="quote-boxed-main">
+          <div class="quote-boxed-text">
+            <p>
+              Just wanted to say many, many thanks for helping me set up an
+              amazing Costa Rican adventure! My nephew and I had a blast! All of
+              the accommodations were perfect as were the activities that we did
+              (canopy, coffee tour, hikes, fishing, and massages!) We have such
+              fond memories and can't thank you enough!
+            </p>
+          </div>
+          <div class="quote-boxed-meta">
+            <p class="quote-boxed-cite">Samantha Smith</p>
+            <p class="quote-boxed-small">Regular Customer</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- JERGA PUCALLPINA -->
+<section id="jerga" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>JERGA PUCALLPINA</h2>
+        </div>
+      </div>
+
+      <div class="col-md-offset-2 col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <p>No voten basura en Pucallpá no sean chambones</p>
+            <div class="tst-author">
+              <h4>"Chambon"</h4>
+              <span>Persona que entorpese las cosas </span>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>
+              Mister te cuidaddo no vaya entrar en lugares peligrosos o lo
+              pueden dejar calato.
+            </p>
+            <div class="tst-author">
+              <h4>"Calato"</h4>
+              <span>Desnudo, bebé o recién nacido.</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <p>
+              Despues de unas buenas aventuras por Pucallpá no quedarian mal una
+              ricas chelas
+            </p>
+            <div class="tst-author">
+              <h4>"Chelas"</h4>
+              <span>Cerveza</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

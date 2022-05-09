@@ -11,7 +11,7 @@ https://templatemo.com/tm-556-catalog-z
 */
 
 /*colores de las letras*/
-p, .tm-text-gray { color: #999; }
+/*p, .tm-text-gray { color: #999; }*/
 .tm-text-gray-light { color: #CCC; }
 .tm-text-gray-dark { color: #666; }
 
@@ -182,7 +182,8 @@ figure.effect-ming:hover img { opacity: 0.4; }
     .tm-social-links li { margin-right: 3px; }
 }
 /*---------------------------------------------*/
-p, .tm-text-gray { color: #999; }
+/*p, .tm-text-gray { color: #999; }*/
+
 .tm-text-gray-light { color: #CCC; }
 .tm-text-gray-dark { color: #666; }
 
@@ -377,8 +378,7 @@ figure.effect-ming:hover img { opacity: 0.4; }
     border-radius: 4px;
   }
   .contenedorGeneral .titulo{
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column: span 6;
   }
   /*Clase Hijo*/
   .contentLugar{
