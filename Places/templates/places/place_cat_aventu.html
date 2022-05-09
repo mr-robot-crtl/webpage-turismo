@@ -1,4 +1,4 @@
-{% extends 'webpage/base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
 {% block content %}
     <!-- Banner background -->
@@ -15,9 +15,9 @@
         <!-- contentLugar - Clase hijo -->
         <div class="contentLugar">
             <!--img, titulo y redirecccionamiento-->
-            <div class="imageLugar"><a href="lug_cat_aventu_lug_01.html"><img
+            <div class="imageLugar"><a href="{% url 'lug_cat_aventu_lug_01' %} "><img
                         src="images/lugares/categoria-02/restinga/01-perfil.jpg" alt=""></a>
-                <a href="lug_cat_aventu_lug_01.html">
+                <a href="{% url 'lug_cat_aventu_lug_01' %} ">
                     <h3>Restinga Yarinacocha</h3>
                 </a>
             </div>

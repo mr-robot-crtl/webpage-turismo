@@ -987,3 +987,8 @@ section {
 		padding: 40px 45px 45px;
 	}
 }
+
+/*row-50*/
+html .row-50 {
+	margin-bottom: -50px;
+}

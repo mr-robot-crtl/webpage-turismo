@@ -1,43 +1,1143 @@
-{% extends 'core/base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'core/base.html' %} {% load static %} {% block content %}
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
-    <div class="row">
-      <div class="owl-carousel owl-theme">
-        <div class="item item-first">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>Bienvenido a Pucallpá</h3>
-                <h1>La Tierra colorada</h1>
+  <div class="row">
+    <div class="owl-carousel owl-theme">
+      <div class="item item-first">
+        <div class="caption">
+          <div class="container">
+            <div class="col-md-8 col-sm-12">
+              <h3>Bienvenido a Pucallpá</h3>
+              <h1>La Tierra colorada</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item item-second">
+        <div class="caption">
+          <div class="container">
+            <div class="col-md-8 col-sm-12">
+              <h3>Respira naturaleza</h3>
+              <h1>Maravillate de su hermosos paisajes!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item item-third">
+        <div class="caption">
+          <div class="container">
+            <div class="col-md-8 col-sm-12">
+              <h3>Identificate con la naturaleza</h3>
+              <h1>Vive la mejor experiencia, con sus mejores atardeceres</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="nav_about_pucallpa">
+    <div class="wow fadeInUp" data-wow-delay="0.2s">
+      <ul class="menu-about-pucallpa">
+        <li><a href="#historia-pucallpa">Historia de Pucallpa</a></li>
+        <li><a href="#geografia-pucallpa">Geografia</a></li>
+        <li><a href="#artesania-pucallpa">Artesania</a></li>
+        <li><a href="#folclore-pucallpa">Folclore</a></li>
+        <li><a href="#gatronomia-pucallpa">Gastronomia</a></li>
+        <li><a href="#festividades-pucallpa">Festividades</a></li>
+        <li><a href="#mitos-y-leyendas-pucallpa">Mitos y Leyendas</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="scrol"></div>
+</section>
+
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+  <div class="container">
+       <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <span class="icon icon-bar"></span>
+                 <span class="icon icon-bar"></span>
+                 <span class="icon icon-bar"></span>
+            </button>
+            <!-- lOGO TEXT HERE -->
+            <a href="index.html" class="navbar-brand">Here <span>.</span> Pucallpá</a>
+       </div>
+       <!-- MENU LINKS -->
+       <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-nav-first">
+                 <li><a href="{% url 'Home' %}" class="smoothScroll">Home</a></li>
+                 <li><a href="{% url 'Tours' %}" class="smoothScroll">Tours</a></li>
+                 <li><a href="{% url 'Places' %}" class="smoothScroll">Lugares</a></li>
+                 <li><a href="{% url 'Services' %}" class="smoothScroll">Services</a></li>
+                 <li><a href="{% url 'Login' %}" class="smoothScroll">Sing in</a></li>
+            </ul>
+       </div>
+  </div>
+</section>
+
+<!--  -->
+<!-- Contenido General - Clase Padre -->
+<section class="contenedorGeneral">
+  <!-- content about pucallpa - clase hija -->
+  <div class="content-about-pucallpa">
+    <!--section historia de pucallpa-->
+    <div id="historia-pucallpa">
+      <!--title-->
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s">
+        <h2>HISTORIA DE DE PUCALLPÁ</h2>
+      </div>
+      <!--Modulo 01-->
+      <div class="modulo-01">
+        <!--sub title-->
+        <div class="sub-title-01 wow fadeInUp" data-wow-delay="0.2s">
+          <h3>Antecedentes históricos de Pucallpa</h3>
+        </div>
+      </div>
+      <!--Modulo 02-->
+      <div class="modulo-02">
+        <!--img-->
+        <div
+          class="image-01 team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.2s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/about-pucallpa-01.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+      <!--Modulo 03-->
+      <div class="modulo-03 wow fadeInUp" data-wow-delay="0.2s">
+        <!--texto descriptivo-->
+        <div class="txt-parrafo-01">
+          <p>
+            En la cuenca del Ucayali por los años 1833 y con la fiebre del
+            caucho se vivió un gran movimiento comercial. Fue en aquella época
+            cuando se establecieron las primeras familias mestizas en lo que
+            ahora es la ciudad de Pucallpa.
+          </p>
+          <p>
+            Los descendientes de estos tres hombres han tratado en forma
+            sistemática de convencer, que cada una de ellos han sido fundadores
+            de Pucallpa; sin embargo, estos tres hombres y sus familias,
+            incluidos sus peones mestizos cuando llegaron a las tierras de
+            Pucallpa había allí una población indígena.
+          </p>
+        </div>
+      </div>
+      <!--Modulo 04-->
+      <div class="modulo-04 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="txt-parrafo-02">
+          <p>
+            Está población indígena era los shipibos y ellos ya había llamado a
+            sus tierras May Yushin que significa "Tierra de demonios" o "Tierra
+            de diablos", posiblemente por que era un territorio en constante
+            conflicto interétnico.
+          </p>
+          <p>
+            Mediante Ley Nº 9815 del 2 de Julio de 1943 y se creó la provincia
+            de Coronel Portillo como parte del departamento de Loreto,
+            estableciéndose como su capital a la ciudad de Pucallpa.Está
+            población indígena era los shipibos y ellos ya había llamado a sus
+            tierras May Yushin que significa "Tierra de demonios" o "Tierra de
+            diablos", posiblemente por que era un territorio en constante
+            conflicto interétnico.
+          </p>
+        </div>
+      </div>
+      <!--Modulo 05-->
+      <div class="modulo-05">
+        <div class="sub-title-02 wow fadeInUp" data-wow-delay="0.2s">
+          <h3>Significado del nombre Pucallpa</h3>
+        </div>
+        <div
+          class="image-02 team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.2s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/pucallpa-colorada.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-03 wow fadeInUp" data-wow-delay="0.2s">
+          <p>
+            El nombre proviene de dos vocablos quechuas “puca” (tierra) y
+            “allpa” (colorada). Entonces el nombre de Pucallpa significa “tierra
+            colorada” nombre dado por el color de sus tierras arcillosas.
+          </p>
+        </div>
+      </div>
+      <!--Modulo 06-->
+      <div class="modulo-06">
+        <div class="sub-title-03 wow fadeInUp" data-wow-delay="0.2s">
+          <h3>Origen del nombre Pucallpa</h3>
+        </div>
+        <div
+          class="image-03 team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.2s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/pucallpa-shipibo.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-04 wow fadeInUp" data-wow-delay="0.2s">
+          <p>
+            Pero antes de la llegada de los misioneros estas tierras eran
+            habitadas por los nativos shipibos quienes denominaron a sus tierras
+            “May Yushin” (“may” = “tierra” y “yushin” = “demonio” o “diablo”)
+            que significa “tierra de demonios”. Se crea que lo denominaron así
+            por los constantes conflictos étnicos que sostenía la tribu
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Geografia de pucallpa-->
+    <div id="geografia-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s"><h2>Geografía de Pucallpa Peru</h2></div>
+
+      <div class="modulo-01">
+        <div class="sub-titulo-01 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>La ciudad de Pucallpa se ubica</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/ubicacion-pucallpa.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-01 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            en el departamento de Ucayali en el centro oriente del Perú a
+            orillas del río Ucayali. Está en plena selva amazónica a 154
+            m.s.n.m. El clima de Pucallpa es tropical cálido todo el año.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-02">
+        <div class="sub-titulo-02 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>La temperatura promedio</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/temperatura-pucallpa.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-02 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            durante el año es 26ºC, con un promedio de 25ºC en julio y un
+            promedio de 26.5ºC en los meses de setiembre a enero. La temperatura
+            máxima promedia es 33ºC y la temperatura mínima es 21.5ºC promedia.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-03">
+        <div class="sub-titulo-03 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>La precipitación</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/presipitacion-pucallpa.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-03 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            anual es aproximadamente1570 mm con mayor precipitación entre los
+            meses de octubre y abril.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Artesania de pucallpa-->
+    <div id="artesania-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.3s">
+        <h2>Artesanía</h2>
+      </div>
+      <div class="modulo-01 wow fadeInUp" data-wow-delay="0.6s">
+        <div>
+          <p>
+            Se realizan trabajos en madera (tallados), bisutería (semillas y
+            mostacilla), bordado y pintado de telas con tintes naturales (huito
+            y arcillas), adornos con plumas de aves y escamas de paiche y
+            sombreros.
+          </p>
+        </div>
+        <div class="galeria-artesania wow fadeInUp" data-wow-delay="0.5s">
+          <div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div
+                  class="section-title wow fadeInUp"
+                  data-wow-delay="0.1s"
+                ></div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-01.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-01.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-02.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-02.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-03.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-03.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-04.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-04.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU T<div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-05.png' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-05.png' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-06.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-06.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-07.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-07.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-08.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-08.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <!-- MENU THUMB -->
+                <div class="menu-thumb">
+                  <a
+                    href="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-10.jpg' %}"
+                    class="image-popup"
+                    title="American Breakfast"
+                  >
+                    <img
+                      src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa-10.jpg' %}"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <div class="item item-second">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>Respira naturaleza</h3>
-                <h1>Maravillate de su hermosos paisajes!</h1>
+      </div>
+      <div class="modulo-02">
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/artesania-pucallpa.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="historico wow fadeInUp" data-wow-delay="0.6s">
+          <p>Historico arte pucallpino | 1899- 2009</p>
+        </div>
+      </div>
+    </div>
+    <!-- Folclore pucallpa-->
+    <div id="folclore-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s">
+        <h2>Folclore</h2>
+      </div>
+
+      <div class="modulo-01 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="txt-parrafo-01">
+          <p>Entre las danzas mestizas destacan</p>
+        </div>
+      </div>
+
+      <div
+        class="modulo-02 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Sitaracuy</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-sitaracuy.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="modulo-03 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Pandilla</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-pandilla.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="modulo-04 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Cajada</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-cajada.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="modulo-05 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Changanacuy</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-changanacuy.png' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="modulo-06 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Boa</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-boa.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="modulo-07 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.5s"
+      >
+        <div>
+          <h5>Tanguiño</h5>
+          <img
+            src="{% static 'webpage/images/about_pucallpa/folclore-tanguillo.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="modulo-08 team-thumb wow fadeInUp about-image"
+        data-wow-delay="0.6s"
+      >
+        <div>
+          <p>
+            Las danzas indígenas más populares son danzas ceremoniales, rituales
+            y de bienvenida, con cánticos en el idioma nativo, al compás de
+            instrumentos de viento como la flauta, la paca ati y la yupana, así
+            como el tambor y otros instrumentos ancestrales.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Gastronomia de pucallpa-->
+    <div id="gatronomia-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s">
+        <h2>Gastronomia de Pucallpa</h2>
+      </div>
+      <!--Comidas-->
+      <div class="comida">
+        <div class="modulo-01">
+          <div class="sub-title-01 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>Comidas</h3>
+            <p>Entre los platos típicos de la región destacan:</p>
+          </div>
+        </div>
+        <div class="modulo-02">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Patarashca</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-01.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>
+                    Patarashca: pescado envuelto en hojas de bijao y asado al
+                    carbón.
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <div class="item item-third">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>Identificate con la naturaleza</h3>
-                <h1>Vive la mejor experiencia, con sus mejores atardeceres</h1>
+        <div class="modulo-03">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Juane</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-02.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>
+                    arroz con gallina envuelta en hojas de bijao y cocida.
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modulo-04">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Tacacho con cecina</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-03.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>
+                    plátano verde asado con chicharrón de cerdo. Se sirve con
+                    carne ahumada de cerdo.
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modulo-05">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Zarapatera</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-04.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>Plato típico preparado a base de Tortuga</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Bebida-->
+      <div class="bebida">
+        <div class="modulo-01">
+          <div class="sub-title-01 wow fadeInUp" data-wow-delay="0.6s">
+            <h3>Bebidas</h3>
+            <p>
+              Las bebidas tradicionales son a base de frutas y cultivos
+              regionales
+            </p>
+          </div>
+        </div>
+        <div class="modulo-02">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Masato</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-05.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>Bebida de yuca cocida y fermentada.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modulo-03">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Aguajina</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-06.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>Aguaje (fruta regional) chancado, colado y endulzado.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modulo-04">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Chapo</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-07.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>plátano maduro, cocido y batido que se sirve frío.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modulo-05">
+          <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
+            <h5>Bebidas alcohólicas típicas</h5>
+          </div>
+          <div class="image">
+            <div
+              class="team-thumb wow fadeInUp about-image"
+              data-wow-delay="0.6s"
+            >
+              <img
+                src="{% static 'webpage/images/about_pucallpa/gastronomia-08.jpg' %}"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4>
+                    siete raíces, huitochado, chuchuasi, para para, leva,
+                    clavohuasca
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <!--Festividades pucallpa-->
+    <div id="festividades-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s">
+        <h2>Festividades de Pucallpa</h2>
+      </div>
+      <div class="modulo-01">
+        <div class="sub-title-01 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>Festival del Carnaval Ucayalino / Febrero - Marzo</h3>
+        </div>
+        <div class="image team-thumb wow fadeInUp about-image">
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-05.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-01 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            Provincia Coronel Portillo, distritos de Callería y Yarinacocha.
+            Concursos de danzas típicas alrededor de la humisha o cortamonte. En
+            la fiesta se elige a la reina del carnaval y se realizan pasacalles
+            con comparsas tradicionales y desfiles de carros alegóricos.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-02">
+        <div class="sub-title-02 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>Fiesta de San Juan / Junio Toda la región</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-02.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-02 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            Feria artesanal y agroindustrial con desfiles, pasacalles,
+            exposiciones de artesanía y pintura, competencias náuticas,
+            concursos de danzas y gastronomía, exhibiciones de paracaidismo,
+            quema de shuntos, rodeo y presentaciones de artistas regionales,
+            nacionales e internacionales.
+          </p>
+          <p>
+            El día 24 es tradicional ir a los balnearios, por la creencia de que
+            las aguas están benditas por San Juan Bautista. Se consumen juanes y
+            chicha de maíz.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-03">
+        <div class="sub-title-03 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>
+            Festival Regional por el Día Mundial del Folclore / Agos 20-22
+          </h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-03.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-03 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            Durante estos días se realizan concursos de conocimiento en cultura
+            regional, gastronómicos, de danzas indígenas y mestizas y de
+            vestimenta y artesanía; además, se corona a la Señorita Folclore.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-04">
+        <div class="sub-title-04 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>Semana Turística de la Región Ucayali / Septiembre, 23 al 30</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-04.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-04 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            Se realizan ferias artesanales, turísticas y de productos
+            agropecuarios, charlas radiales y televisivas, presentación de
+            elencos artísticos regionales, pasacalle folclórico y diversos
+            concursos. Asimismo, se presenta a las empresas turísticas que más
+            destacaron en el año.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-05">
+        <div class="sub-title-05 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>
+            Aniversario de Pucallpa, de los Distritos de Yarinacocha y Masisea y
+            de la Comunidad Nativa de San Francisco / Octubre 4 al 20
+          </h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-05.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-05 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            La población participa en diversas actividades de índole
+            gastronómico, danzas, artesanía y pintura, entre otras.
+          </p>
+        </div>
+      </div>
+      <div class="modulo-06">
+        <div class="sub-title-06 wow fadeInUp" data-wow-delay="0.3s">
+          <h3>Pastoreadas Navideñas / Diciembre, 23 al 30</h3>
+        </div>
+        <div
+          class="image team-thumb wow fadeInUp about-image"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="{% static 'webpage/images/about_pucallpa/festividades-06.jpg' %}"
+            class="img-responsive"
+            alt=""
+          />
+        </div>
+        <div class="txt-parrafo-06 wow fadeInUp" data-wow-delay="0.6s">
+          <p>
+            En las pastoreadas participan diversas comparsas, conformada cada
+            una por 25 o más personas; las comparsas representan estampas
+            religiosas alusivas a la Navidad así como personajes típicos de
+            Ucayali.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Mitos y leyendas pucallpa-->
+    <div id="mitos-y-leyendas-pucallpa">
+      <div class="titulo wow fadeInUp" data-wow-delay="0.2s">
+        <h2>Mitos y Leyendas de Pucallpa</h2>
+      </div>
+      <!--Mitos y leyendas-->
+      <div class="mitos-y-leyendas">
+        <div class="modulo-01">
+          <div class="sub-title-01 wow fadeInUp" data-wow-delay="0.3s">
+            <h2>Mitos y Leyendas</h2>
+            <p>
+              Tradición, mito o leyenda son los relatos que desde tiempos
+              inmemoriables van de boca en boca entre los habitantes de la
+              selva, estremeciéndolos de pavor, especialmente en las noches de
+              luna cuando un abuelo los cuenta.
+            </p>
+          </div>
+        </div>
+        <div class="modulo-02">
+          <div class="sub-title-02 wow fadeInUp" data-wow-delay="0.4s">
+            <h3>La Yacumama</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.5s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-01.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="modulo-03">
+          <div class="sub-title-03 wow fadeInUp" data-wow-delay="0.4s">
+            <h3>La Runamula</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.5s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-02.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="modulo-04">
+          <div class="sub-title-04 wow fadeInUp" data-wow-delay="0.4s">
+            <h3>Los Diablos del Monte</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.5s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-03.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="modulo-05 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="sub-title-05">
+            <h3>El Hechizo de la Lupuna</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.5s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-04.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!--Personajes Místicos-->
+      <div class="personajes-misticos">
+        <div class="modulo-01 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="sub-title-01">
+            <h2>Personajes Misticos</h2>
+            <p>
+              Tradición, mito o leyenda son los relatos que desde tiempos
+              inmemoriables van de boca en boca entre los habitantes de la
+              selva, estremeciéndolos de pavor, especialmente en las noches de
+              luna cuando un abuelo los cuenta.
+            </p>
+          </div>
+        </div>
+        <div class="modulo-02">
+          <div class="sub-title-02 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>Chullachaqui</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.4s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-05.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <div class="txt-parrafo-01 wow fadeInUp" data-wow-delay="0.5s">
+            <p>
+              Es un pequeño demonio capaz de transfigurarse en cualquier humano
+              o animal silvestre, está caracterizado por tener pies desigual, un
+              lado humano y otro de caprino. Se encuentra en la espesura del
+              bosque como falso guía para extraviar a los caminantes, modula
+              voces familiares, rumores y gritos de la sinfonía selvática.
+            </p>
+          </div>
+        </div>
+        <div class="modulo-03">
+          <div class="sub-title-03 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>Yacuruna</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.4s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-06.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <div class="txt-parrafo-02 wow fadeInUp" data-wow-delay="0.5s">
+            <p>
+              Hombre del agua que sale a la superficie para raptar a las mujeres
+              de su agrado y llevarlas a convivir en las profundidades de los
+              ríos. Se le describe como un ser humano pero con la cara hacia
+              atrás.
+            </p>
+          </div>
+        </div>
+        <div class="modulo-04">
+          <div class="sub-title-04 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>Yara</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.4s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-07.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <div class="txt-parrafo-03 wow fadeInUp" data-wow-delay="0.5s">
+            <p>
+              Sirena que vive en las profundidades de los ríos y lagos de la
+              selva, es una demonia que atrae a los hombres y se les lleva a
+              convivir. Es descrita como una bella mujer de formas perfectas,
+              cabellos rubios, ojos azules y piel de nácar.
+            </p>
+          </div>
+        </div>
+        <div class="modulo-05">
+          <div class="sub-title-05 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>Ayaymama</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.4s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-08.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <div class="txt-parrafo-04 wow fadeInUp" data-wow-delay="0.5s">
+            <p>
+              Llanto de hijos abandonados en el bosque por la pobreza de sus
+              padres. El espanto, hambre, desamparo determinaron la muerte de
+              los niños cuyos quejidos agónicos tomaron cuerpo de un pajarillo
+              planillero que perpetua en la selva el llanto de esas criaturas
+              diciendo ayay mama
+            </p>
+          </div>
+        </div>
+        <div class="modulo-06">
+          <div class="sub-title-06 wow fadeInUp" data-wow-delay="0.3s">
+            <h3>El Bufeo</h3>
+          </div>
+          <div
+            class="image team-thumb wow fadeInUp about-image"
+            data-wow-delay="0.4s"
+          >
+            <img
+              src="{% static 'webpage/images/about_pucallpa/mitos-leyendas-09.jpg' %}"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+          <div class="txt-parrafo-05 wow fadeInUp" data-wow-delay="0.5s">
+            <p>
+              Es el delfín del río, existen hasta tres clases: colorado, plomizo
+              y negro. Son mamíferos, de respiración pulmonar, disparan choros
+              de agua cuando salen a respirar. El más grande es el colorado que
+              llega a medir hasta cuatro metros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
