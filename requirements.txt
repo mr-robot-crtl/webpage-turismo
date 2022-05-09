@@ -1,3 +1,13 @@
 django==4.0.3
 django-environ
-Python==3.10.1
+asgiref==3.4.1
+certifi==2020.6.20
+chardet==3.0.4
+idna==2.10
+pytz==2020.1
+requests==2.27.1
+sqlparse==0.3.1
+urllib3==1.26.5
+
+#Python==3.10.1
+#pip install request

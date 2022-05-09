@@ -1,0 +1,246 @@
+/*Menu*/
+.menu-about-pucallpa {
+  list-style: none;
+  padding: 0;
+  background: url('../images/testimonial-bg.jpg') center center no-repeat;
+  background-size: cover;
+  width: 90%;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+.menu-about-pucallpa li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: inherit;
+
+}
+
+.menu-about-pucallpa li a:hover {
+  color: red;
+
+}
+
+.menu-about-pucallpa li {
+  display: inline-block;
+  text-align: center;
+
+}
+/*historico de las img*/
+
+.historico {
+  padding: 30px;
+}
+
+.content-about-pucallpa img {
+  width: 100%;
+}
+
+.content-about-pucallpa p {
+  color: #5a5656;
+}
+
+
+/*HISTORIA PUCALLPA*/
+#historia-pucallpa {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*.historia-pucallpa img{
+    width: 100%;
+  }*/
+
+#historia-pucallpa .modulo-01 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#historia-pucallpa .modulo-02 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#historia-pucallpa .modulo-03 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#historia-pucallpa .modulo-04 {
+  grid-column: span 4;
+}
+
+#historia-pucallpa .modulo-05 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#historia-pucallpa .modulo-06 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+
+
+/*GEOFRAFIA PUCALLPA*/
+#geografia-pucallpa {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*.geografia-pucallpa img{
+    width: 100%;
+    }
+*/
+/*ARTESANIA PUCALLPA*/
+#artesania-pucallpa {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#artesania-pucallpa .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#artesania-pucallpa .modulo-02 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+/*FOLCLORE PUCALLPA*/
+#folclore-pucallpa {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#folclore-pucallpa .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+#folclore-pucallpa .modulo-08 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+/*Gastronomia*/
+#gatronomia-pucallpa .comida {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#gatronomia-pucallpa .bebida {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#gatronomia-pucallpa .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+#gatronomia-pucallpa h4 {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+/*Festividades*/
+#festividades-pucallpa {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#festividades-pucallpa .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#festividades-pucallpa .modulo-02 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#festividades-pucallpa .modulo-03 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+#festividades-pucallpa .modulo-04 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#festividades-pucallpa .modulo-05 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#festividades-pucallpa .modulo-06 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+/*Mitos y leyendas*/
+#mitos-y-leyendas-pucallpa .mitos-y-leyendas {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mitos-y-leyendas .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+}
+
+/*Personaje miticos*/
+#mitos-y-leyendas-pucallpa .personajes-misticos {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.personajes-misticos .modulo-01 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+
+}
+
+/*
+.festividades-pucallpa .modulo-01{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.festividades-pucallpa .modulo-02{
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+.festividades-pucallpa .modulo-03{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.festividades-pucallpa .modulo-04{
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+.festividades-pucallpa .modulo-05{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.festividades-pucallpa .modulo-06{
+  grid-column-start: 4;
+  grid-column-end: 7;
+}*/

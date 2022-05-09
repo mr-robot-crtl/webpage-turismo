@@ -1,18 +1,10 @@
 from django.shortcuts import render, HttpResponse
+from requests import request
 
 # Create your views here.
 
 def home(request):
     return render(request, "webpage/home.html")
 
-def tours(request):
-     return render(request, "webpage/tours.html")
-
-def places(request):
-     return render(request, "webpage/places.html")
-
-def services(request):
-     return render(request, "webpage/services.html")
-
-def login(request):
-    return render(request, "webpage/login.html")
+def about_pucallpa(request):
+    return render(request, "webpage/about-pucallpa.html")
