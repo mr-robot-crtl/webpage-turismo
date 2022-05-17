@@ -1,0 +1,25 @@
+{% extends 'core/base2.html' %} {% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste soluta quos
+    illo? Architecto, voluptas ipsum aut veniam rerum dolore quisquam dolorum
+    in? Ipsa, minus consequatur omnis quia accusamus repudiandae accusantium!
+  </p>
+</div>
+<form method="post" action="">
+  {% csrf_token %}
+
+  <div style="width: 75%; margin: auto;">
+
+   {{form|crispy}}
+
+    <button type="submit" class="btn btn-success">Registrate</button>
+
+  </div>
+  
+</form>
+
+{% endblock %}
+ 

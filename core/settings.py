@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as msj_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,9 +44,12 @@ INSTALLED_APPS = [
     'webpage',
     'Tours',
     'Places',
-    'Servicess',
+    'Servicios',
     'Login',
     'Clima',
+    'Carro',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -71,6 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Carro.context_processor.importe_total_carro'
             ],
         }, 
     },
@@ -135,3 +140,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRISPY_TEMPLATE_PACK='bootstrap'
+MESSAGE_TAGS={
+    msj_error.DEBUG: 'debug',
+    msj_error.INFO: 'info',
+    msj_error.SUCCESS: 'success',
+    msj_error.WARNING: 'warnig',
+    msj_error.ERROR: 'danger',
+}

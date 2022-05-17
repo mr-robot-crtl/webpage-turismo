@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from Carro.carro import Carro
 from Clima.key import api_key, lang
 import requests
 import math
@@ -7,6 +8,8 @@ import math
 # Create your views here.
 
 def clima(request):
+        carro=Carro(request)
+
         url = f"http://api.openweathermap.org/data/2.5/forecast?q=Pucallpa&lang={lang}&appid={api_key}"
         
         w_dataset = requests.get(url).json()

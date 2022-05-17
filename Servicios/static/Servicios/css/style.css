@@ -1,0 +1,20 @@
+.services-img img{
+    width: 100%;
+}
+.servicios{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.servicios .modulo{
+    display: inline-block;
+}
+.card{
+    margin-bottom: 20px;
+}
+.card img{
+    width: 100% !important;
+}
+.card-body{
+    text-align: center;
+}

@@ -10,5 +10,8 @@ sqlparse==0.3.1
 urllib3==1.26.0
 #para menejar images
 pillow==9.1.0
+#Formularios
+django-crispy-forms==1.14.0
+
 #Python==3.10.1
 #pip install request
