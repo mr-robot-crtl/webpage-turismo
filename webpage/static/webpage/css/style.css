@@ -1,3 +1,11 @@
+/*nav btn login*/
+.nav-btn-login{
+ border-radius: 3px;
+  margin-right: 2px;
+  background-color: skyblue;
+  height: 40px;
+
+}
 /*Menu*/
 .menu-about-pucallpa {
   list-style: none;

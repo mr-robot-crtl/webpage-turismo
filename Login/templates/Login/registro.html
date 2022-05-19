@@ -1,4 +1,4 @@
-{% extends 'core/base2.html' %} {% load static %} {% load crispy_forms_tags %}
+{% extends 'core/base2.html' %} {% load static %} 
 {% block content %}
 <div>
   <p>
@@ -19,10 +19,83 @@
   {% csrf_token %}
 
   <div class="" style="width: 75%; margin: auto">
-    {{form|crispy}}
+    {% if messages %}
+    {% for mensaje in messages %}
+    <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span>
+    
+
+  {% endfor %}
+  {% endif %}
+    <div id="div_id_username" class="control-group">
+      <label for="id_username" class="control-label requiredField">
+        Nombre de usuario<span class="asteriskField">*</span>
+      </label>
+      <div class="controls">
+        <input
+          type="text"
+          name="username"
+          maxlength="150"
+          autocapitalize="none"
+          autocomplete="username"
+          autofocus=""
+          class="textinput textInput"
+          required=""
+          id="id_username"
+        />
+        <p id="hint_id_username" class="help-block">
+          Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y
+          @/./+/-/_
+        </p>
+      </div>
+    </div>
+
+    <div id="div_id_password1" class="control-group">
+      <label for="id_password1" class="control-label requiredField">
+        Contraseña<span class="asteriskField">*</span>
+      </label>
+      <div class="controls">
+        <input
+          type="password"
+          name="password1"
+          autocomplete="new-password"
+          class="textinput textInput"
+          required=""
+          id="id_password1"
+        />
+        <p id="hint_id_password1" class="help-block"></p>
+        <ul>
+          <li>
+            Su contraseña no puede asemejarse tanto a su otra información
+            personal.
+          </li>
+          <li>Su contraseña debe contener al menos 8 caracteres.</li>
+          <li>Su contraseña no puede ser una clave utilizada comúnmente.</li>
+          <li>Su contraseña no puede ser completamente numérica.</li>
+        </ul>
+        <p></p>
+      </div>
+    </div>
+
+    <div id="div_id_password2" class="control-group">
+      <label for="id_password2" class="control-label requiredField">
+        Contraseña (confirmación)<span class="asteriskField">*</span>
+      </label>
+      <div class="controls">
+        <input
+          type="password"
+          name="password2"
+          autocomplete="new-password"
+          class="textinput textInput"
+          required=""
+          id="id_password2"
+        />
+        <p id="hint_id_password2" class="help-block">
+          Para verificar, introduzca la misma contraseña anterior.
+        </p>
+      </div>
+    </div>
 
     <button type="submit" class="btn btn-success">Registrate</button>
   </div>
 </form>
-
 {% endblock %}

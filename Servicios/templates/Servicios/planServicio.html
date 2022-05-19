@@ -3,6 +3,7 @@
 <!-- HOME -->
 <div>hola</div>
 <div><p>hola</p></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus porro exercitationem, illum unde vero minima quam id qui sunt omnis facere deserunt, ipsam quas soluta excepturi quidem corrupti esse doloribus?</p>
 <!-- Servicios -->
 <div class="container">
     <div class="row">
@@ -10,7 +11,7 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
-              <h6 class="card-title">{{planes.nombre}}</h6>
+              <a href="{% url 'CategoriaServicio' planes.id%}"> {{planes.nombre}}</a>
               <p><img class="card-img-top" src="{{planes.image.url}}" alt="" /></p>
               <p>{{planes.descripcion}}</p>
             </div>

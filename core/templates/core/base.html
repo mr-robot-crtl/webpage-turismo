@@ -58,15 +58,6 @@
                
           </div>
      </section>
-
-     <div style="text-align: right; margin-right:100px; color: red;">
-       {% if user.is_authenticated %}
-       Hola {{user.username}}&nbsp;&nbsp;<a href="{% url 'CerrarSesion' %}">Cerrar Sesion</a>
-       {% else %}
-       <a href="#">Login</a>&nbsp; <a href="{% url 'Autenticacion' %}">Registrate</a>
-       {% endif %}
-     </div>
-     
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
           <div class="container">
@@ -86,13 +77,14 @@
                          <li><a href="{% url 'Tours' %}" class="smoothScroll">Tours</a></li>
                          <li><a href="{% url 'Places' %}" class="smoothScroll">Lugares</a></li>
                          <li><a href="{% url 'Servicio' %}" class="smoothScroll">Servicios</a></li>
-                
-                         <li><a href="{% url 'Autenticacion' %}" class="smoothScroll">Inicio Sesion</a></li>
-                         {% if user.is_authenticated %}
-                         Hola {{user.username}}&nbsp;&nbsp;<a href="{% url 'CerrarSesion' %}">Cerrar Sesion</a>
+                         <!--li><a href="{% url 'Autenticacion' %}" class="smoothScroll">Inicio Sesion</a></li-->
+                         <li>{% if user.is_authenticated %}<a href="#">Hi {{user.username}}</a></li>
+                         <li><a href="{% url 'CerrarSesion' %}">Log out</a></li>
                          {% else %}
-                         <a href="{% url 'Logear' %}">Login</a>&nbsp; <a href="{% url 'Autenticacion' %}">Registrate</a>
-                         {% endif %}
+                         <li><a href="{% url 'Logear' %}" class="nav-btn-login">Login</a></li>
+                         <li><a href="{% url 'Autenticacion' %}" class="nav-btn-login">Registrate</a>
+                         {% endif %}</li>
+          
                     </ul>
                </div>
           </div>

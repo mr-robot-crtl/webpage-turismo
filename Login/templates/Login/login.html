@@ -1,4 +1,4 @@
-{% extends 'core/base2.html' %} {% load static %} {% load crispy_forms_tags %}
+{% extends 'core/base2.html' %} {% load static %} 
 {% block content %}
 <div>
   <p>
@@ -15,8 +15,9 @@
     laudantium iusto.
   </p>
 </div>
-<form method="post" action="">
+<!--form method="post" action="">
   {% csrf_token %}
+  {% load crispy_forms_tags %}
 
   <div style="width: 75%; margin: auto">
 	  {% if messages %}
@@ -29,6 +30,22 @@
 	  <br>
     {{form|crispy}}
 
+    <button type="submit" class="btn btn-success">Login</button>
+  </div>
+</form-->
+<form method="post" action="">
+  {% csrf_token %}
+  <div>
+    {% if messages %}
+	  	{% for mensaje in messages %}
+		  <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span>
+		  
+
+		{% endfor %}
+	  {% endif %}
+	  <br>
+    <input type="text"  name="username">
+    <input type="password"  name="password">
     <button type="submit" class="btn btn-success">Login</button>
   </div>
 </form>

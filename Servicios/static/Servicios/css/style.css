@@ -18,3 +18,24 @@
 .card-body{
     text-align: center;
 }
+
+/*Preguntas frecuentes*/
+.preguntas-frecuentes .row{
+    margin: auto !important;
+    text-align: center !important;
+    width: 90% !important;
+    background-color: #eafbff !important;
+}
+.preguntas-frecuentes  .title{
+    text-align: center;
+}
+
+/*Contacto*/
+.form-contacto{
+    background-color: aquamarine;
+    width: 90%;
+    margin: auto;
+}
+.form-contacto input, textarea{
+    width: 100% !important;
+}
