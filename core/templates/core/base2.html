@@ -41,7 +41,13 @@
                
           </div>
      </section>
-
+     <div style="text-align: right; margin-right:100px; color: red;">
+          {% if user.is_authenticated %}
+          Hola {{user.username}}&nbsp;&nbsp;<a href="{% url 'CerrarSesion' %}">CerrarSesion</a>
+          {% else %}
+          <a href="#">Login</a>&nbsp; <a href="{% url 'Autenticacion' %}"></a>
+          {% endif %}
+        </div>
 
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
@@ -61,8 +67,8 @@
                          <li><a href="{% url 'Home' %}" class="smoothScroll">Home</a></li>
                          <li><a href="{% url 'Tours' %}" class="smoothScroll">Tours</a></li>
                          <li><a href="{% url 'Places' %}" class="smoothScroll">Lugares</a></li>
-                         <li><a href="{% url 'Services' %}" class="smoothScroll">Servicios</a></li>
-                         <li><a href="{% url 'Login' %}" class="smoothScroll">Inicio Sesion</a></li>
+                         <li><a href="{% url 'Servicio' %}" class="smoothScroll">Servicios</a></li>
+                         <li><a href="{% url 'Autenticacion' %}" class="smoothScroll">Inicio Sesion</a></li>
                </div>
           </div>
      </section>
