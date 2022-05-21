@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Clima',
     'Carro',
     'crispy_forms',
+    
 
 ]
 

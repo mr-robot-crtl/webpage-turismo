@@ -7,6 +7,7 @@ from tabnanny import verbose
 from turtle import update
 from venv import create
 from django.db import models
+from Places.models import Lugares
 
 # Create your models here.
 class PlanServicio(models.Model):
@@ -50,3 +51,21 @@ class CategoriaServicio(models.Model):
         verbose_name_plural='categorias'  
     def __str__(self):
         return self.nombre
+class DetalleCategoria(models.Model):
+    nombre=models.CharField(max_length=100)
+    categorias=models.ManyToManyField(CategoriaServicio)
+    image=models.ImageField(upload_to='detalle-categoria', null=True, blank=True)
+    lugares=models.ManyToManyField(Lugares)
+    recomendacion=models.CharField(max_length=200)
+    created=models.DateTimeField(auto_now_add=True)
+    updated=models.DateTimeField(auto_now_add=True) 
+    class Meta:
+        verbose_name='detalle'
+        verbose_name_plural='detalles'  
+    def __str__(self):
+        return self.nombre
+
+    
+ 
+    
+    

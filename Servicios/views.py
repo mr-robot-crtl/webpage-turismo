@@ -2,7 +2,7 @@ from ast import If
 from ctypes import FormatError
 import imp
 from django.shortcuts import redirect, render
-from Servicios.models import PlanServicio, CategoriaServicio
+from Servicios.models import PlanServicio, CategoriaServicio, DetalleCategoria
 from .forms import FormularioContacto
 from django.core.mail import EmailMessage
 # Create your views here.
@@ -37,4 +37,11 @@ def categoriaServicio(request, planservicio_id):
      plan=PlanServicio.objects.get(id=planservicio_id)
      categoria=CategoriaServicio.objects.filter(planes=plan)
      return render(request, "Servicios/categoriaServicio.html", {"categoria": categoria,"plan":plan})
+
+def detalleCategoria(request, categoriaservicio_id):
+     categoria=CategoriaServicio.objects.get(id=categoriaservicio_id)
+     detalle=DetalleCategoria.objects.filter(categorias=categoria)
+     return render(request, "Servicios/detalle_categoria.html", {"detalle": detalle,"categoria":categoria})
+
+
     

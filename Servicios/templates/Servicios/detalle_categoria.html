@@ -39,39 +39,34 @@
   </div>
 </section>
 <div class="container">
-  <div style="float:right;"><p>totalnosirve:</p>
-    {% include "carro/widget.html " %}
-  </div>
   <div class="row">
-    {% for categorias in categoria %}
-    <div class="col-md-4">
+    {% for detalles in detalle %}
+        {% for categoria in detalles.categorias.all %}
+         <div><h2>{{categoria.nombre}}
+        </h2></div>
+      {% endfor %}
+    {% endfor %}
+        
+    {% for detalles in detalle %}
       <div class="card">
         <div class="card-body">
-          <a href="{% url 'DetalleCategoria' categorias.id%}">
-            {{categorias.nombre}}</a
-          >
-          <!--h6 class="card-title">{{categorias.nombre}}</h6-->
+          <h6 class="card-title">{{detalles.nombre}}</h6>
+          <div class="col-md-8"><img class="card-img-top" src="{{detalles.image.url}}" alt="" /></div>
+          <div class="col-md-4"> <p>{{detalles.recomendacion}}</p></div>
+          <div><h3>luagares</h3>
+              
+          {% for lugar in detalles.lugares.all %}
+            <h2>{{lugar.nombre}}</h2>
+          {% endfor %}
 
-          <a href="{% url 'DetalleCategoria'  categorias.id%}"
-            ><img class="card-img-top" src="{{categorias.image.url}}" alt=""
-          /></a>
-
-          <!--p><img class="card-img-top" src="{{categorias.image.url}}" alt="" /></p-->
-
-
-          <p>{{categorias.descripcion}}</p>
-          <p>{{categorias.costo}}</p>
-        </div>
-        <div class="card-footer text-center">
-          <a class="btn btn-success" href="{% url 'carro:agregar' categorias.id %}">agregar al carro</a>
-          <a class="btn btn-success" href="{% url 'carro:agregar' categorias.id %}">Reservar</a>
+          </div>
+          <div><a href="">back</a></div>
+        
         </div>
       </div>
-    </div>
     {% endfor %}
   </div>
 </div>
-
 
 <!-- JERGA PUCALLPINA -->
 <section id="jerga" data-stellar-background-ratio="0.5">
