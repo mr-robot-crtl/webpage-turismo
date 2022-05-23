@@ -1,12 +1,11 @@
-{% extends 'core/base.html' %}
-{% load static %}
-{% block content %}
-    <!-- BANER BACKGROUND -->
-    <section id="banner" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+<!-- Banner background -->
+<!-- HOME -->
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
 
-        </div>
-    </section>
+  </div>
+</section>
 
 
   <section class=lugares>
@@ -62,7 +61,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Comida</h2>
-                          <a href="{% url 'lug_cat_comid.html' %}">View more</a>
+                          <a href="{% url 'lug_cat_comid' %}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">
@@ -79,7 +78,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Seguridad</h2>
-                          <a href="lug_cat_seguri.html">View more</a>
+                          <a href="{% url 'lug_cat_seguri'%}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">
@@ -96,7 +95,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Educacion</h2>
-                          <a href="lug_cat_educac.html">View more</a>
+                          <a href=" {% url 'lug_cat_educac'%}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">
@@ -113,7 +112,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Salud</h2>
-                          <a href="lug_cat_salud.html">View more</a>
+                          <a href=" {% url 'lug_cat_salud'%}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">
@@ -130,7 +129,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Bancos</h2>
-                          <a href="lug_cat_banco.html">View more</a>
+                          <a href="{% url 'lug_cat_banco'%}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">
@@ -147,7 +146,7 @@
                       <figcaption class="d-flex align-items-center justify-content-center">
                           <!-- Titulo y Redireccionamiento -->
                           <h2>Zonas Recreativas</h2>
-                          <a href="lug_cat_zoRecre.html">View more</a>
+                          <a href="{% url 'lug_cat_zoRecre'%}">View more</a>
                       </figcaption>
                   </figure>
                   <div class="d-flex justify-content-between tm-text-gray">

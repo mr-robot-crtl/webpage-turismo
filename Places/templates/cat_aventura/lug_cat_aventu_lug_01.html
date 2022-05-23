@@ -1,38 +1,33 @@
-{% extends 'core/base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+<!-- Banner background -->
+<!-- HOME -->
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+
+  </div>
+</section>
+
     <!-- Lugar01 - RESTINGA -->
     <!-- Contenido General - Clase Padre -->
     <section class="contenedorGeneral">
         <div class="titulo">
-            <h1>Lugares</h1>
+            <h1>Descripcion</h1>
         </div>
         <!-- contentLugar - Clase hijo -->
         <div class="contentLugar">
             <!--img, titulo y redirecccionamiento-->
-            <div class="imageLugar"><img src="images/lugares/categoria-02/restinga/01-perfil.jpg" alt="">
-                <h3>Restinga Yarinacocha</h3>
+            <div class="imageLugar"><img src={% static "webpage/images/lugares/categoria-01/hombreGrande/01-perfil.jpg" %} alt="">
+                <h3>Hombre Grande</h3>
             </div>
             <!--texto descriptivo-->
             <div class="txtLugar">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam rerum, autem deserunt illum velit quisquam quod vitae, libero omnis nemo consequatur voluptatum
-                    nihil quia repellat aperiam pariatur cupiditate. Obcaecati, assumenda.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum aperiam sunt ab? Incidunt
-                    sed ipsa asperiores porro, assumenda earum! Beatae cupiditate voluptas, quas sunt architecto enim
-                    recusandae fuga accusamus
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam rerum, autem deserunt illum velit quisquam quod vitae, libero omnis nemo consequatur voluptatum
-                    nihil quia repellat aperiam pariatur cupiditate. Obcaecati, assumenda.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum aperiam sunt ab? Incidunt
-                    sed ipsa asperiores porro, assumenda earum! Beatae cupiditate voluptas, quas sunt architecto enim
-                    recusandae fuga accusamus
+                <p>Ubicado a la entrada de la ciudad, en el Km. 5 de la carretera Federico Basadre,
+                     que da la bienvenida tanto a quienes ingresan por tierra a Pucallpa como a quienes lo hacen por su aeropuerto - es una importante obra del escultor Ucayalino Roger Gaviria Orsi.
                 </p>
             </div>
             <!-- El horario de los lugares -->
             <div class="horario">
-                <h3>Horario: Lunes - Domingo | 6.00am - 6.00pm </h3>
+                <h3>Horario: Lunes - Domingo | libre </h3>
                 <!-- <h3>Lunes - Viernes</h3><h5>8.00am - 10.00pm</h5> -->
             </div>
             <!-- Galeria de fotos-->
@@ -48,13 +43,13 @@
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/02.jpg" class="image-popup"
+                            <a href="" class="image-popup"
                                 title="American Breakfast">
-                                <img src="images/lugares/categoria-02/restinga/02.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/02.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
-                                        <h3>Atardecer en la laguna Restinga</h3>
+                                        <h3></h3>
                                     </div>
                                 </div>
                             </a>
@@ -64,9 +59,9 @@
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/03.jpg" class="image-popup"
+                            <a href="" class="image-popup"
                                 title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/03.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/03.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
@@ -80,9 +75,9 @@
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/04.jpg" class="image-popup"
+                            <a href= class="image-popup"
                                 title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/04.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/04.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
@@ -92,61 +87,14 @@
                             </a>
                         </div>
                     </div>
+                   
                     <div class="col-md-4 col-sm-6">
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/05.jpg" class="image-popup"
+                            <a href="" class="image-popup"
                                 title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/05.jpg" class="img-responsive" alt="">
-                                <!-- Descripcion dentro de la imagen -->
-                                <div class="menu-info">
-                                    <div class="menu-item">
-                                        <h3>Camino hacia la laguna Restinga</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <!-- MENU THUMB -->
-                        <div class="menu-thumb">
-                             <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/06.jpg" class="image-popup"
-                                title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/06.jpg" class="img-responsive" alt="">
-                                <!-- Descripcion dentro de la imagen -->
-                                <div class="menu-info">
-                                    <div class="menu-item">
-                                        <h3>Un hermoso paseo en vote</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <!-- MENU THUMB -->
-                        <div class="menu-thumb">
-                             <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/07.jpg" class="image-popup"
-                                title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/07.jpg" class="img-responsive" alt="">
-                                <!-- Descripcion dentro de la imagen -->
-                                <div class="menu-info">
-                                    <div class="menu-item">
-                                        <h3>El atractivo lugar de alojamiento "El castillo"</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <!-- MENU THUMB -->
-                        <div class="menu-thumb">
-                             <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/08.jpg" class="image-popup"
-                                title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/08.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/05.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
@@ -160,9 +108,9 @@
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/09.jpg" class="image-popup"
+                            <a href="" class="image-popup"
                                 title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/09.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/06.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
@@ -176,9 +124,9 @@
                         <!-- MENU THUMB -->
                         <div class="menu-thumb">
                              <!-- Fotos Principales -->
-                            <a href="images/lugares/categoria-02/restinga/10.jpg" class="image-popup"
+                            <a href="" class="image-popup"
                                 title="Self-made Salad">
-                                <img src="images/lugares/categoria-02/restinga/10.jpg" class="img-responsive" alt="">
+                                <img src={% static "webpage/images/lugares/categoria-01/hombreGrande/07.jpg" %} class="img-responsive" alt="">
                                 <!-- Descripcion dentro de la imagen -->
                                 <div class="menu-info">
                                     <div class="menu-item">
@@ -191,19 +139,17 @@
                 </div>
             </div>
             <!-- Niño shipibo -->
-            <div class="img-boy-shipibo"><img src="/images/lugares/categoria-02/restinga/reconm.jpg" alt=""></div>
+            <div class="img-boy-shipibo"><img src={% static "webpage/images/lugares/categoria-02/restinga/reconm.jpg" %} alt=""></div>
             <!-- texto de recomendacion -->
             <div class="recomendacion">
                 <h2>Recomendacion</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi doloribus quas deleniti quos rem dolore odio est pariatur,
-                    velit, doloremque, dolorum id ad ipsam eveniet cumque nulla aperiam impedit. Officia!</p>
+                <p>estar equipado con cosas que necesitaras al llevar llegar al sitio , llevar su dinero si desea consumir en el establecimienos que se incluye o llevar comida o si desea realizar otra actividad</p>
             </div>
 
             <div class="google-maps" data-wow-delay="0.4s">
                 <div id="google-map">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.6437074755154!2d-74.56555519963233!3d-8.33815429586435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3a2c0e0b42d01%3A0xfdc48665bdf0d39a!2sCam.%20Restinga%2C%20Pucallpa!5e0!3m2!1ses!2spe!4v1638479668891!5m2!1ses!2spe"
+                        src="https://www.google.com/maps/@-8.3897274,-74.5710104,3a,75y,91.65h,80.7t/data=!3m7!1e1!3m5!1sG2https://www.google.com/maps/place/Monumento+Al+Campesino+Pucallpa/@-8.3897682,-74.5711089,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipOGTMId5romWMjLl79p1hld3vGiFSbmUudGMiHI!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOGTMId5romWMjLl79p1hld3vGiFSbmUudGMiHI%3Dw86-h114-k-no!7i3096!8i4128!4m5!3m4!1s0x91a3bd74a050595b:0x3282209156abf286!8m2!3d-8.3897602!4d-74.5710788
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -215,22 +161,22 @@
                 <h1>Mas Lugares</h1>
             </div>
             <!--img, titulo y redirecccionamiento-->
-            <div class="mas-lugares"><a href="lug_cat_aventu_lug_02.html"><img src="images/lugares/categoria-02/sanjose/01-perfil.jpg" alt="">
+            <div class="mas-lugares"><a href="lug_cat_aventu_lug_02.html"><img src={% static "webpage/images/lugares/categoria-02/sanjose/01-perfil.jpg"%} alt="">
                     <h3>San Jose</h3>
                 </a>
             </div>
             <!--img, titulo y redirecccionamiento-->
-            <div class="mas-lugares"><a href="lug_cat_aventu_lug_03.html"><img src="images/lugares/categoria-02/jungla/01-perfil.jpg" alt="">
+            <div class="mas-lugares"><a href="lug_cat_aventu_lug_03.html"><img src= {% static "webpage/images/lugares/categoria-02/jungla/01-perfil.jpg"%} alt="">
                     <h3>La Jungla</h3>
                 </a>
             </div>
             <!--img, titulo y redirecccionamiento-->
-            <div class="mas-lugares"><a href="lug_cat_aventu_lug_04.html"><img src="images/lugares/categoria-02/parqueNatural/01-perfil.jpg" alt="">
+            <div class="mas-lugares"><a href="lug_cat_aventu_lug_04.html"><img src={% static "webpage/images/lugares/categoria-02/parqueNatural/01-perfil.jpg"%} alt="">
                     <h3>Parque Natural</h3>
                 </a>
             </div>
             <!--img, titulo y redirecccionamiento-->
-            <div class="mas-lugares"><a href="lug_cat_aventu_lug_01.html"><img src="images/lugares/categoria-02/restinga/01-perfil.jpg" alt="">
+            <div class="mas-lugares"><a href="lug_cat_aventu_lug_01.html"><img src= {% static "webpage/images/lugares/categoria-02/restinga/01-perfil.jpg" %} alt="">
                     <h3>La Restinga</h3>
                 </a>
             </div>
