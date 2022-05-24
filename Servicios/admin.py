@@ -1,19 +1,21 @@
 from django.contrib import admin
-from .models import PlanServicio, Movilidad, CategoriaServicio, DetalleCategoria
-
+from .models import Servicio,Feedback
+from login.models import Cliente
+from reserva.models import Orders
 # Register your models here.
+class ClienteAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Cliente, ClienteAdmin)
 
+class ProductAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Servicio, ProductAdmin)
 
-class PlanAdmin(admin.ModelAdmin):
-    readonly_fields=('created','updated')
-class CategoriaAdmin(admin.ModelAdmin):
-    readonly_fields=('created','updated')
-class MovilidadAdmin(admin.ModelAdmin):
-    readonly_fields=('created','updated')
-class DetalleCatAdmin(admin.ModelAdmin):
-    readonly_fields=('created','updated')
+class OrderAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Orders, OrderAdmin)
 
-admin.site.register(CategoriaServicio,CategoriaAdmin)
-admin.site.register(DetalleCategoria,DetalleCatAdmin)
-admin.site.register(PlanServicio,PlanAdmin)
-admin.site.register(Movilidad,MovilidadAdmin)
+class FeedbackAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Feedback, FeedbackAdmin)
+# Register your models here.

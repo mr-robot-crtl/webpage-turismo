@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-from django.contrib.messages import constants as msj_error
+#from django.contrib.messages import constants as msj_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,11 +44,14 @@ INSTALLED_APPS = [
     'webpage',
     'Tours',
     'Places',
-    'Servicios',
-    'Login',
     'Clima',
-    'Carro',
-    'crispy_forms',
+    'servicios',
+    'login',
+    'reserva',
+    'pago',
+    'admins',
+    'widget_tweaks',
+
     
 
 ]
@@ -76,7 +79,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'Carro.context_processor.importe_total_carro'
             ],
         }, 
     },
@@ -90,12 +92,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'AstralTour_db',
-        'USER': 'postgres',
-        'PASSWORD':'joseazaz',
-        'HOST': 'localhost',
-        'PORT': 8080
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'AstralTour_db',
+        #'USER': 'postgres',
+        #'PASSWORD':'joseazaz',
+        #'HOST': 'localhost',
+        #'PORT': 8080
         #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -123,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'es'
+LANGUAGE_CODE = 'en-es'
 
 TIME_ZONE = 'UTC'
 
@@ -138,6 +142,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+LOGIN_REDIRECT_URL='/afterlogin'
 #Location of static files
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
@@ -153,10 +158,3 @@ EMAIL_HOST_PASSWORD="juandelbarriopkmz"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK='bootstrap'
-MESSAGE_TAGS={
-    msj_error.DEBUG: 'debug',
-    msj_error.INFO: 'info',
-    msj_error.SUCCESS: 'success',
-    msj_error.WARNING: 'warnig',
-    msj_error.ERROR: 'danger',
-}
