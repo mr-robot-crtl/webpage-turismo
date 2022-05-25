@@ -1,6 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% load widget_tweaks %}
+
 <style media="screen">
   .form-style-1 {
   	margin:10px auto;
@@ -86,10 +87,8 @@
   	color:red;
   }
 </style>
-
 {% block content %}
-<br><br><br><br><br>  <br>
-
+<br><br><br><br><br>
 
 <div class="container">
   <center>
@@ -98,28 +97,29 @@
 
     <form method="post">
       {% csrf_token %}
+    <ul class="form-style-1">
+        <li style="color:#155759;">
+            <label>Name <span class="required">*</span></label>
+            {% render_field feedbackForm.name class="field-long"  %}
 
-      <div class="form-group">
-        <label>Name <span class="required">*</span></label>
-        {% render_field feedbackForm.name class="form-control"  %}
-      </div>
-      <div class="form-group">
-        <label>Your Feedback <span class="required">*</span></label>
-        {% render_field feedbackForm.feedback id="field5" class="form-control field-textarea"  %}
-      </div>
-        
-      <input type="submit" value="Send Feedback" />
-      
+        </li>
+
+        <li style="color:#155759;">
+            <label>Your Feedback <span class="required">*</span></label>
+            {% render_field feedbackForm.feedback id="field5" class="field-long field-textarea"  %}
+
+        </li>
+        <li>
+            <input type="submit" value="Send Feedback" />
+        </li>
+    </ul>
     </form>
 
 
   </center>
 
 
-
 </div>
-
-
- 
-
 {% endblock  %}
+
+  

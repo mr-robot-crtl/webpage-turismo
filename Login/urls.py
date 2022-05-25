@@ -17,7 +17,9 @@ urlpatterns = [
     path('adminlogin', LoginView.as_view(template_name='ecom/adminlogin.html'),name='adminlogin'),
 
     path('clientesignup', views.cliente_signup_view),
+    path('se/clientelogin', LoginView.as_view(template_name='ecom/clientelogin.html'),name='clientelogin'),
     path('clientelogin', LoginView.as_view(template_name='ecom/clientelogin.html'),name='clientelogin'),
+
     path('cliente-home', views.cliente_home_view,name='cliente-home'),
     path('my-profile', views.my_profile_view,name='my-profile'),
     path('edit-profile', views.edit_profile_view,name='edit-profile'),
