@@ -4,14 +4,14 @@
 
 
 <head>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
 <style media="screen">
   .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #40d5d5;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -62,11 +62,17 @@
 </style>
 
 </head>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+
+  </div>
+</section>
+<br><br>
+
 
 <div class="container">
   <div class="panel panel-primary">
-    <div class="panel-heading" style="background-color: #ff6600;">
+    <div class="panel-heading" style="background-color: #40d5d5;">
       <h6 style="text-align:center;" class="panel-title">My Cart</h6>
     </div>
     <table class="table table-hover" id="dev-table">
@@ -85,11 +91,11 @@
 
       <tr>
         <td> {{p.name}}</td>
-        <td> <img src="{% static p.servicio_image.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+        <td> <img src="{{p.servicio_image.url}}" alt="Profile Pic" height="40px" width="40px" /></td>
         <td>{{p.price}}</td>
         <td>{{p.description}}</td>
 
-        <td><a class="btn btn-danger btn-xs" href="{% url 'remove-from-cart' p.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'remove-from-cart' p.id  %}"><i class="fa-solid fa-trash-can"></i></a></td>
 
       </tr>
       {%else%}

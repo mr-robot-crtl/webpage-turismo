@@ -1,4 +1,4 @@
-{% extends 'ecom/cliente_base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -6,8 +6,8 @@
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
-    background-color: black;
-    font-family: 'Open Sans', serif
+    background-color: #898989;
+
 }
 
 .container {
@@ -159,10 +159,10 @@ p {
 }
 
 </style>
-<br>
-<h3 style="text-align:center; color: white;">Thank You For Your Order  <strong>{{request.user}}</strong> !</h3> <br><br>
+<br><br><br><br>
+<h3 style="text-align:center; color: white;">Gracias por su Reserva  <strong>{{request.user}}</strong> !</h3> <br><br>
 <div class="container">
-    <header class="card-header" style="text-align:center;"> My Orders / Tracking </header>
+    <header class="card-header" style="text-align:center;"> Mi Reserva /Seguimiento    </header>
 
     {% for servicios,order in data %}
 
@@ -172,7 +172,7 @@ p {
                 <li class="col-md-4">
                   <figure class="itemside mb-3">
                     {%for servicio in servicios%}
-                      <div class="aside"><img src="{% static servicio.servicio_image.url %}" class="img-sm border"></div>
+                      <div class="aside"><img src="{{servicio.servicio_image.url}}" class="img-sm border"></div>
                       <figcaption class="info align-self-center">
 
                           <p class="title"><strong>Name : </strong>{{servicio.name}} <br> <strong>Description : </strong>{{servicio.description}}</p> <span class="text-muted"><strong>Price : </strong>{{servicio.price}} </span>
@@ -193,26 +193,28 @@ p {
             <hr>
 
             <div class="track">
+    
+        
                 {%if order.status == 'Pending' %}
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-frown-o"></i> </span> <span class="text">Order Pending</span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-check"></i> </span> <span class="text"> Order Confirmed</span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-home"></i> </span> <span class="text">Delivered</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa fa-frown-o"></i> </span> <span class="text">Reserva pendiente</span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; " class="fa fa-check"></i> </span> <span class="text"> Reserva confirmado</span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; "class="fa-solid fa-bus"></i> </span> <span class="text"> Tour en proceso </span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; "class="fa-solid fa-flag"></i> </span> <span class="text">Tour Finalizado</span> </div>
                 {%elif order.status == 'Order Confirmed' %}
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-frown-o"></i> </span> <span class="text">Order Pending</span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-check"></i> </span> <span class="text"> Order Confirmed</span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-home"></i> </span> <span class="text">Delivered</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa fa-frown-o"></i> </span> <span class="text">Reserva pendiente</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px;" class="fa fa-check"></i> </span> <span class="text"> Reserva confirmado</span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; " class="fa-solid fa-bus"></i> </span> <span class="text"> Tour en proceso </span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; " class="fa-solid fa-flag"></i> </span> <span class="text">Tour Finalizado</span> </div>
                 {%elif order.status == 'Out for Delivery'%}
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-frown-o"></i> </span> <span class="text">Order Pending</span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-check"></i> </span> <span class="text"> Order Confirmed</span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                <div class="step "> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-home"></i> </span> <span class="text">Delivered</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa fa-frown-o"></i> </span> <span class="text">Reserva pendiente</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa fa-check"></i> </span> <span class="text"> Reserva confirmado</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa-solid fa-bus"></i> </span> <span class="text"> Tour en proceso </span> </div>
+                <div class="step "> <span class="icon"> <i style="padding-top:5px; " class="fa-solid fa-flag"></i> </span> <span class="text">Tour Finalizado</span> </div>
                 {%else%}
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-frown-o"></i> </span> <span class="text">Order Pending</span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-check"></i> </span> <span class="text"> Order Confirmed</span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                <div class="step active"> <span class="icon"> <i style="padding-top:5px; padding-right:20px;" class="fa fa-home"></i> </span> <span class="text">Delivered</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa fa-frown-o"></i> </span> <span class="text">Reserva pendiente</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px;" class="fa fa-check"></i> </span> <span class="text"> Reserva confirmado</span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px; " class="fa-solid fa-bus"></i> </span> <span class="text"> Tour en proceso </span> </div>
+                <div class="step active"> <span class="icon"> <i style="padding-top:5px;" class="fa-solid fa-flag"></i> </span> <span class="text">Tour Finalizado</span> </div>
                 {%endif%}
             </div>
 

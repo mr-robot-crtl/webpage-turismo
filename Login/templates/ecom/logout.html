@@ -1,10 +1,21 @@
-{% extends 'ecom/homebase.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
 {% block content %}
-<br><br><br>
-<img src="{% static "images/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;">
+<style>
+#banner2{
+    height:50%;!important
+  }
+  </style>
+  <section id="banner2" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+    
+      </div>
+    </section>
+  <div class="success-page" style="top:auto; text-align: center;">
+     <img  src="http://share.ashiknesin.com/green-checkmark.png" class="center" alt="" />
+    <h2>Gracias por ser parte de esta gran comunidad, Astral Tours !</h2>
+  </div>
 
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br>
+
+<br>
 {% endblock content %}

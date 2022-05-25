@@ -1,12 +1,6 @@
-<!DOCTYPE html>
+{% extends 'core/base.html' %}
 {% load static %}
 {% load widget_tweaks %}
-<html lang="en" dir="ltr">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Online Shopping</title>
 <style media="screen">
   .form-style-1 {
   	margin:10px auto;
@@ -93,42 +87,39 @@
   }
 </style>
 
-</head>
+{% block content %}
+<br><br><br><br><br>  <br>
 
-<body style="background-color: black;">
 
-  {%if request.user.is_authenticated%}
-    {% include "ecom/cliente_navbar.html" %}
-  {%else%}
-    {% include "ecom/navbar.html" %}
-  {%endif%}
-
+<div class="container">
   <center>
     <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
 
 
     <form method="post">
       {% csrf_token %}
-    <ul class="form-style-1">
-        <li style="color: white;">
-            <label>Name <span class="required">*</span></label>
-            {% render_field feedbackForm.name class="field-long"  %}
 
-        </li>
-
-        <li style="color: white;">
-            <label>Your Feedback <span class="required">*</span></label>
-            {% render_field feedbackForm.feedback id="field5" class="field-long field-textarea"  %}
-
-        </li>
-        <li>
-            <input type="submit" value="Send Feedback" />
-        </li>
-    </ul>
+      <div class="form-group">
+        <label>Name <span class="required">*</span></label>
+        {% render_field feedbackForm.name class="form-control"  %}
+      </div>
+      <div class="form-group">
+        <label>Your Feedback <span class="required">*</span></label>
+        {% render_field feedbackForm.feedback id="field5" class="form-control field-textarea"  %}
+      </div>
+        
+      <input type="submit" value="Send Feedback" />
+      
     </form>
 
 
   </center>
-  {% include "ecom/footer.html" %}
-</body>
-</html>
+
+
+
+</div>
+
+
+ 
+
+{% endblock  %}

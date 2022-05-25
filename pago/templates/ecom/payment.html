@@ -1,23 +1,24 @@
-{% extends 'ecom/cliente_base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
 
 {% block content %}
+<style>
+    body{
+        background:#ebe0e0;
+    }
+</style>
 <head>
 
 </head>
-<style media="screen">
-
-.panel-title {display: inline;font-weight: bold;}
-.checkbox.pull-right { margin: 0; }
-.pl-ziro { padding-left: 0px; }
-</style>
-<br><br>
-<marquee scrolldelay="50">ITS FAKE PAYMENT PAGE. WE DONOT STORE YOUR DATA</marquee>
-<marquee scrolldelay="50">ITS JUST FOR DEMO</marquee>
-<br><br>
-<div class="container" style="text-align:center; padding-left:300px;">
-    <div class="row">
-        <div class="col-xs-12 col-md-4" style="height:500px; width:600px;">
+<section id="banner" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+  
+	</div>
+  </section>
+  <br><br>
+<div class="container" style="text-align:center;">
+  
+        <div class="pay" style="margin: auto; width:700px;">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -42,18 +43,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-7 col-md-7">
+                        <div class="col-md-8">
                             <div class="form-group">
-                                <label for="expityMonth">
-                                    EXPIRY DATE</label>
-                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                               
+                                <div class="col-md-4 pl-ziro">
+                                    <label for="expityMonth">
+                                        EXPIRY DATE</label>
+                                </div>
+                                <div class="col-md-4 pl-ziro">
                                     <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
                                 </div>
-                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+                                <div class="col-md-4 pl-ziro">
+                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xs-5 col-md-5 pull-right">
+                        <div class="col-md-4 pull-right">
                             <div class="form-group">
                                 <label for="cvCode">
                                     CV CODE</label>
@@ -73,6 +78,7 @@
         </div>
     </div>
 </div>
+<br><br><br><br><br><br>
 
 
 {% endblock content %}

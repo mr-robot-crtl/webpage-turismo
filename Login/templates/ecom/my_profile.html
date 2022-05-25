@@ -5,12 +5,12 @@
 
 <style media="screen">
   body {
-    background-color:#000000;
+    background-color:#ebe0e0;
   }
   .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #40d5d5;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -49,17 +49,17 @@
 
 
 </style>
-<br><br><br>
+<br><br><br><br><br><br>
 <div style="padding-left:300px;" class="container">
 
         <div class="col-sm-2 col-md-2">
-            <img src="{% static cliente.profile_pic.url %}"   alt="profile pic" class="img-rounded img-responsive" />
+            <img src="{{cliente.profile_pic.url }}"   alt="profile pic" class="img-rounded img-responsive" />
         </div>
         <div class="col-sm-4 col-md-4">
-            <blockquote style="color: white;">
-                <p>{{request.user}}</p> <small style="color: white;"><cite title="Source Title">{{cliente.address}}  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+            <blockquote style="color:#141212;">
+                <p>{{request.user}}</p> <small style="color: #141212;"><cite title="Source Title">{{cliente.address}} <i class="fa-solid fa-location-dot"></i></cite></small>
             </blockquote>
-            <p style="color: white;"> <i class="glyphicon glyphicon-phone" ></i> {{cliente.mobile}}
+            <p style="color: #141212;"> <i class="fa-solid fa-phone-flip"></i> {{cliente.mobile}}
             </p>
         </div>
 
