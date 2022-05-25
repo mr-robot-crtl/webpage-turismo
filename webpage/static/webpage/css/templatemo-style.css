@@ -234,7 +234,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   .custom-navbar .navbar-nav.navbar-nav-first {
-    margin-left: 30em;
+    margin-left: 28em;
   }
 
   .custom-navbar .navbar-nav.navbar-right li a {
@@ -269,7 +269,8 @@ http://www.templatemo.com/tm-515-eatery
     font-weight: bold;
     color: #ffffff;
     padding-right: 22px;
-    padding-left: 22px;
+    
+    /*padding-left: 22px;*/
     text-transform: uppercase;
   }
 

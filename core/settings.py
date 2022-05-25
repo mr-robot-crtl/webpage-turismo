@@ -92,14 +92,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': 'AstralTour_db',
-        #'USER': 'postgres',
-        #'PASSWORD':'joseazaz',
-        #'HOST': 'localhost',
-        #'PORT': 8080
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'AstralTour_db',
+        'USER': 'postgres',
+        'PASSWORD':'joseazaz',
+        'HOST': 'localhost',
+        'PORT': 8080
         #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -142,6 +142,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL ='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+
+
 LOGIN_REDIRECT_URL='/afterlogin'
 #Location of static files
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]

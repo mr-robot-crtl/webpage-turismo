@@ -1,9 +1,6 @@
-<!DOCTYPE html>
+{% extends 'core/base.html' %}
 {% load widget_tweaks %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+
 
 
 
@@ -144,9 +141,9 @@ a.socialIcon:hover,
     transition: all 0.8s
 }
     </style>
-  </head>
-  <body>
-    {% include "ecom/navbar.html" %}
+
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -171,11 +168,10 @@ a.socialIcon:hover,
         </div>
     </div>
 </div>
+{% endblock  %}
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br>
-{% include "ecom/footer.html" %}
-  </body>
-</html>
+

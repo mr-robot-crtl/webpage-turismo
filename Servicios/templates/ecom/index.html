@@ -1,12 +1,8 @@
-{% extends 'ecom/homebase.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
 {% block content %}
 
   <style media="screen">
-    body,
-html {
-  height: 100%;
-}
 
 .d-flex {
   display: -webkit-box;
@@ -28,10 +24,6 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-body {
-  background-color:#000000;
 }
 
 .page-wrapper {
@@ -307,6 +299,7 @@ body {
   }
 }
   </style>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
 
 {%if servicios%}
 <h3 style="text-align:center; color:yellow;">{{word}}</h3>
@@ -316,10 +309,10 @@ body {
 
       {% for p in servicios %}
       <!-- card1 -->
-      <div class="column">
-      <div class="container page-wrapper" style="width: 450px;">
-        <div class="page-inner">
-          <div class="row">
+      <div class="">
+      <div class="container " style="width: 450px;">
+        <div class="">
+          <div class="">
             <div class="el-wrapper">
               <div class="box-up">
                 <img class="img" src="{% static p.servicio_image.url %}" alt="servicio pic" height="300px" width="300px">

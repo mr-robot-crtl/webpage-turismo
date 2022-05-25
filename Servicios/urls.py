@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView,LogoutView
 
 
 urlpatterns = [
-    path('afterlogin', views.afterlogin_view,name='afterlogin'),
+    path('se/afterlogin', views.afterlogin_view,name='afterlogin'),
     path('se/',views.home_view,name='Servicios'),
    
     path('aboutus', views.aboutus_view),

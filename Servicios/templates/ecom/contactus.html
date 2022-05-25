@@ -13,9 +13,9 @@
 <body style="background-color: black;">
 
   {%if request.user.is_authenticated%}
-    {% include "ecom/cliente_navbar.html" %}
+    {% include "core/base.html" %}
   {%else%}
-    {% include "ecom/navbar.html" %}
+    {% include "core/base.html" %}
   {%endif%}
 
   <center>
@@ -33,6 +33,6 @@
       </div>
     </form>
   </center>
-  {% include "ecom/footer.html" %}
+
 </body>
 </html>
