@@ -1,0 +1,150 @@
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+<!-- Banner background -->
+<!-- HOME -->
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+
+  </div>
+</section>
+    <!-- SECCION 01 - CATEGORIA 01 -->
+    <!-- Contenido General - Clase Padre -->
+    <section class="contenedorGeneral">
+        <div class="titulo">
+            <h1>BANCOS DE LA REGION</h1>
+        </div>
+        <!-- RESTINGA -->
+        <!-- contentLugar - Clase hijo -->
+        <div class="contentLugar">
+            <!--img, titulo y redirecccionamiento-->
+
+
+
+            <div class="imageLugar"><a href="{% url 'lug_cat_banco_lug_01' %} "><img
+                        src={%  static "webpage/images/lugares/categoria-07/bancoNacion/01-perfil.jpg"%} alt=""></a>
+                <a href="{% url 'lug_cat_aventu_lug_01' %} ">
+
+                    <h3>Banco de la Nacion</h3>
+                </a>
+            </div>
+            <!--texto descriptivo-->
+            <div class="txtLugar">
+                <p>es una empresa de derecho público, integrante del Sector Economía y Finanzas,
+                     que opera con autonomía económica, financiera y administrativa. El Banco tiene patrimonio propio y duración indeterminada.
+                </p>
+            </div>
+        </div>
+        <!-- SAN JOSE -->
+        <div class="contentLugar">
+            <!--img, titulo y redirecccionamiento-->
+            <div class="imageLugar"><a href="{% url 'lug_cat_aventu_lug_02' %} "><img
+                        src="{%  static "webpage/images/lugares/categoria-07/bcp/01-perfil.jpg"%}" alt=""></a>
+                <a href="{% url 'lug_cat_aventu_lug_02' %}">
+                    <h3>Banco BCP</h3>
+                </a>
+            </div>
+            <!--texto descriptivo-->
+            <div class="txtLugar">
+                <p>es un banco comercial establecido en el Perú desde 1889, 
+                    y se rige actualmente bajo la Ley General del Sistema Financiero y del Sistema de Seguros y Orgánica de la Superintendencia de Banca.
+                </p>
+            </div>
+        </div>
+        
+        <!-- EL PARQUE NATURAL -->
+        <div class="contentLugar">
+            <!--img, titulo y redirecccionamiento-->
+            <div class="imageLugar"><a href="lug_cat_aventu_lug_04.html"><img
+                        src="{% static 'webpage/images/lugares/categoria-07/scotiabank/01-perfil.jpg' %}" alt=""></a>
+                <a href="lug_cat_aventu_lug_04.html">
+                    <h3>Scotiabank</h3>
+                </a>
+            </div>
+            <!--texto descriptivo-->
+            <div class="txtLugar">
+                <p>banco donde puedes ir
+            </div>
+        </div>
+
+        <!-- SECCION 02 - Mas Categorias -->
+        <div class="contentLugar">
+            <div class="titulo">
+                <h1>Mas Categorias</h1>
+            </div>
+            <!--img, titulo y redirecccionamiento-->
+            <div class="mas-lugares"><a href="{% url 'lug_cat_comid' %}"><img src="{% static "webpage/images/lugares/comida.jpg" %}" alt="">
+                    <h3>Comida</h3>
+                </a>
+            </div>
+            <!--img, titulo y redirecccionamiento-->
+            <div class="mas-lugares"><a href="{% url 'lug_cat_seguri'%}"><img src="{% static "webpage/images/lugares/seguridad.jpg" %}" alt="">
+                    <h3>Seguridad</h3>
+                </a>
+            </div>
+            <!--img, titulo y redirecccionamiento-->
+            <div class="mas-lugares"><a href=" {% url 'lug_cat_educac'%}"><img src="{% static "webpage/images/lugares/Educacion.jpg" %}" alt="">
+                    <h3>Educacion</h3>
+                </a>
+            </div>
+            <!--img, titulo y redirecccionamiento-->
+            <div class="mas-lugares"><a href=" {% url 'lug_cat_salud'%}"><img src="{% static "webpage/images/lugares/salud.jpg" %}" alt="">
+                    <h3>Salud</h3>
+                </a>
+            </div>
+            <!--BTN y redireccionamiento-->
+            <div class="btn-vermas"><button><a href="{% url 'Places' %}">Ver mas Categorias</a></button></div>
+        </div>
+    </section>
+
+    <!-- SECCION 03 - JERGA PUCALLPINA -->
+    <section id="jerga" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                        <!-- Titulo -->
+                        <h2>JERGA PUCALLPINA</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <!-- Frase 1 -->
+                            <p>No voten basura en Pucallpá no sean chambones</p>
+                            <div class="tst-author">
+                                <!-- Palabra pucallpina -->
+                                <h4>"Chambon"</h4>
+                                <!-- Significado -->
+                                <span>Persona que entorpese las cosas </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <!-- Frase 2 -->
+                            <p>Mister te cuidaddo no vaya entrar en lugares peligrosos o lo pueden dejar calato.</p>
+                            <div class="tst-author">
+                                <!-- Palabra pucallpina -->
+                                <h4>"Calato"</h4>
+                                <!-- Significado -->
+                                <span>Desnudo, bebé o recién nacido.</span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <!-- Frase 3 -->
+                            <p>Despues de unas buenas aventuras por Pucallpá no quedarian mal una ricas chelas</p>
+                            <div class="tst-author">
+                                <!-- Palabra pucallpina -->
+                                <h4>"Chelas"</h4>
+                                <!-- Significado -->
+                                <span>Cerveza</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock  %}

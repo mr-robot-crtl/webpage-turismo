@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-#from django.contrib.messages import constants as msj_error
+from django.contrib.messages import constants as msj_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -160,3 +160,10 @@ EMAIL_HOST_PASSWORD="juandelbarriopkmz"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK='bootstrap'
+MESSAGE_TAGS={
+    msj_error.DEBUG: 'debug',
+    msj_error.INFO: 'info',
+    msj_error.SUCCESS: 'success',
+    msj_error.WARNING: 'warnig',
+    msj_error.ERROR: 'danger',
+}
