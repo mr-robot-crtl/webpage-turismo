@@ -1,11 +1,12 @@
 /*nav btn login*/
-.nav-btn-login{
- border-radius: 3px;
+.nav-btn-login {
+  border-radius: 3px;
   margin-right: 2px;
   background-color: skyblue;
   height: 40px;
 
 }
+
 /*Menu*/
 .menu-about-pucallpa {
   list-style: none;
@@ -39,6 +40,7 @@
   text-align: center;
 
 }
+
 /*historico de las img*/
 
 .historico {
@@ -252,3 +254,41 @@
   grid-column-start: 4;
   grid-column-end: 7;
 }*/
+
+
+/*------------------
+DICCIONARIO
+--------------------*/
+.table-diccionario table {
+  background: #FFF;
+  border: 2px solid #CCC;
+  border-collapse: collapse;
+  margin: auto;
+  width: 90%;
+ 
+
+}
+
+.table-diccionario td {
+  border: 1px solid #CCC;
+  padding: 3px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.nav-diccionario .col-md-1{
+  border: 1px solid #FFF;
+  text-align: center;
+  background-color: #575757;
+}
+.nav-diccionario .col-md-1:hover{
+  background-color: #FFF;
+  border: 1px solid #a4a0a0;
+}
+
+.nav-diccionario a{
+  font-weight: bold;
+  color: #FFF;
+}
+.nav-diccionario a:hover{
+  color: #575757;
+}

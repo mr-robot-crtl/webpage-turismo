@@ -1,84 +1,99 @@
-{% extends 'core/base.html' %}
-{% load static %}
-
-{% block content %}
-<style>
-    body{
-        background:#ebe0e0;
-    }
-</style>
-<head>
-
-</head>
+{% extends 'core/base.html' %} {% load static %} {% block content %}
 <section id="banner" data-stellar-background-ratio="0.5">
-	<div class="overlay"></div>
-  
-	</div>
-  </section>
-  <br><br>
-<div class="container" style="text-align:center;">
-  
-        <div class="pay" style="margin: auto; width:700px;">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Payment Details
-                    </h3>
-                    <div class="checkbox pull-right">
-                        <label>
-                            <input type="checkbox" />
-                            Remember
-                        </label>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <form role="form" method="post">
-                    <div class="form-group">
-                        <label for="cardNumber">
-                            CARD NUMBER</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
-                                required autofocus />
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                               
-                                <div class="col-md-4 pl-ziro">
-                                    <label for="expityMonth">
-                                        EXPIRY DATE</label>
-                                </div>
-                                <div class="col-md-4 pl-ziro">
-                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
-                                </div>
-                                <div class="col-md-4 pl-ziro">
-                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 pull-right">
-                            <div class="form-group">
-                                <label for="cvCode">
-                                    CV CODE</label>
-                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#" style="background-color: #ff6600;"><span class="badge pull-right">{{total}}</span> Final Payment</a>
-                </li>
-            </ul>
-            <br/>
-            <a href="{% url 'payment-success' %}" class="btn btn-primary btn-lg btn-block" role="button">Pay</a>
+  <div class="overlay"></div>
+</section>
+<br /><br />
+<section>
+  <div class="container" style="text-align: center">
+    <div class="pay" style="margin: auto; width: 700px">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Payment Details</h3>
+          <div class="checkbox pull-right">
+            <label>
+              <input type="checkbox" />
+              Remember
+            </label>
+          </div>
         </div>
+        <div class="panel-body">
+          <form role="form" method="post">
+            <div class="form-group">
+              <label for="cardNumber"> CARD NUMBER</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="Valid Card Number"
+                  required
+                  autofocus
+                />
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-lock"></span
+                ></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <div class="col-md-4 pl-ziro">
+                    <label for="expityMonth"> EXPIRY DATE</label>
+                  </div>
+                  <div class="col-md-4 pl-ziro">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="expityMonth"
+                      placeholder="MM"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4 pl-ziro">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="expityYear"
+                      placeholder="YY"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 pull-right">
+                <div class="form-group">
+                  <label for="cvCode"> CV CODE</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="cvCode"
+                    placeholder="CV"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+          <a href="#" style="background-color: #ff6600"
+            ><span class="badge pull-right">{{total}}</span> Final Payment</a
+          >
+        </li>
+      </ul>
+      <br />
+      <a
+        href="{% url 'payment-success' %}"
+        class="btn btn-primary btn-lg btn-block"
+        role="button"
+        >Pay</a
+      >
     </div>
-</div>
-<br><br><br><br><br><br>
+  </div>
+</section>
 
+<br /><br /><br /><br /><br /><br />
 
 {% endblock content %}

@@ -23,6 +23,6 @@ urlpatterns = [
     path('cliente-home', views.cliente_home_view,name='cliente-home'),
     path('my-profile', views.my_profile_view,name='my-profile'),
     path('edit-profile', views.edit_profile_view,name='edit-profile'),
-    path('download-invoice/<int:orderID>/<int:productID>', views.download_invoice_view,name='download-invoice'),
+    path('download-invoice/<int:orderID>/<int:servicioID>', views.download_invoice_view,name='download-invoice'),
 
 ]

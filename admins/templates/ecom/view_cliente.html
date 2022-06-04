@@ -1,56 +1,43 @@
-{% extends 'ecom/admin_base.html' %}
+{% extends 'core/admin_base.html' %}
 {% load static %}
 {% block content %}
 
-
-<head>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-  <style media="screen">
-    a:link {
-      text-decoration: none;
-    }
-
-    h6 {
-      text-align: center;
-    }
-
-    .row {
-      margin: 100px;
-    }
-  </style>
-</head>
-<div class="container">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h6 class="panel-title">Lista total de clientes
-      </h6>
-    </div>
-    <table class="table table-hover" id="dev-table">
-      <thead>
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+<section class="view-cliente">
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title">Lista total de clientes
+        </h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Perfil</th>
+            <th>Telefono</th>
+            <th>Pais</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        {% for c in clientes %}
         <tr>
-          <th>Name</th>
-          <th>Profile Picture</th>
-          <th>Mobile</th>
-          <th>Pais</th>
-          <th>Update</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      {% for c in clientes %}
-      <tr>
-        <td> {{c.get_name}}</td>
-        <td> <img src="{{c.profile_pic.url }}" alt="Profile Pic" height="40px" width="40px" /></td>
-        <td>{{c.mobile}}</td>
-        <td>{{c.address}}</td>
-        <td><a class="btn btn-primary btn-xs" href="{% url 'update-cliente' c.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>
-        <td><a class="btn btn-danger btn-xs" href="{% url 'delete-cliente' c.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+          <td> {{c.get_name}}</td>
+          <td> <img src="{{c.profile_pic.url}}" alt="profile pic" height="40px" width="40px" /></td>
+          <td>{{c.mobile}}</td>
+          <td>{{c.address}}</td>
+          <td><a class="btn btn-primary btn-xs" href="{% url 'update-cliente' c.id  %}"><i class="fa-solid fa-pen"></i></span></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'delete-cliente' c.id  %}"><i class="fa-solid fa-trash-can"></i></span></a></td>
 
-      </tr>
-      {% endfor %}
-    </table>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
   </div>
-</div>
+</section>
+
+
 {% endblock content %}

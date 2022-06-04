@@ -141,7 +141,7 @@ def edit_profile_view(request):
     cliente=Cliente.objects.get(user_id=request.user.id)
     user=User.objects.get(id=cliente.user_id)
     userForm=ClienteUserForm(instance=user)
-    clienteForm=ClienteForm(request.FILES,instance=cliente)
+    clienteForm=ClienteForm(instance=cliente)
     mydict={'userForm':userForm,'clienteForm':clienteForm}
     if request.method=='POST':
         userForm=ClienteUserForm(request.POST,instance=user)
