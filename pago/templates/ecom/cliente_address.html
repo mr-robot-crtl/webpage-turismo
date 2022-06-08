@@ -24,6 +24,27 @@
 	        <label>Punto de encuentro<span class="required">*</span></label>
 	        {% render_field addressForm.Address id="field5" class="field-long field-textarea" placeholder="Building Number,city, pin" %}
 	    </li>
+
+		<li>
+	        <label>Fecha<span class="required">*</span></label>
+			<input type="date" {% render_field addressForm.fecha class="field-long field-date" placeholder="fecha" %}
+	       
+	
+	    </li>
+		
+		<li>
+	        <label>adultos <span class="required">*</span></label>
+	        {% render_field addressForm.num_a class="field-long" placeholder="adultsos" %}
+	    </li>
+		
+
+
+		<li>
+	        <label>ninos <span class="required">*</span></label>
+	        {% render_field addressForm.num_n class="field-long" placeholder="ninos" %}
+	    </li>
+
+
 	    <li>
 	        <input type="submit" class="pull-right" value="Proceed To Pay" />
 	    </li>
