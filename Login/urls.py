@@ -21,6 +21,9 @@ urlpatterns = [
     path('clientelogin', LoginView.as_view(template_name='ecom/clientelogin.html'),name='clientelogin'),
 
     path('cliente-home', views.cliente_home_view,name='cliente-home'),
+
+    path('detail-services', views.detail_services,name='Detail-services'),
+
     path('my-profile', views.my_profile_view,name='my-profile'),
     path('edit-profile', views.edit_profile_view,name='edit-profile'),
     path('download-invoice/<int:orderID>/<int:servicioID>', views.download_invoice_view,name='download-invoice'),

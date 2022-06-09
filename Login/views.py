@@ -1,7 +1,7 @@
 import imp
 from django.shortcuts import render,redirect,reverse
 from reserva.models import Orders
-from servicios.models import Servicio
+from servicios.models import Detail_servicio, Servicio
 from login.models import Cliente, User
 from login.forms import ClienteForm, ClienteUserForm
 from django.http import HttpResponseRedirect,HttpResponse
@@ -75,6 +75,12 @@ def cliente_home_view(request):
     else:
         servicio_count_in_cart=0
     return render(request,'ecom/index.html',{'servicios':servicios,'servicio_count_in_cart':servicio_count_in_cart})
+
+
+
+def detail_services(request):
+    details=Detail_servicio.objects.all()
+    return render(request, "ecom/detail_services.html",{"details":details})
 
 
 

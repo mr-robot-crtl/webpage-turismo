@@ -1,4 +1,5 @@
-{% extends 'core/base.html' %} {% load static %} {% block content %} {%if servicios%}
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+ {%if servicios%}
 <!-- servicios data start-->
 <div class="row">
   {% for p in servicios %}
@@ -25,6 +26,9 @@
                   >
                 </div>
                 <div class="a-size">{{p.description}}</div>
+
+                <div class="a-size"><a href="{% url 'Detail-services' %} ">{{p.detail_servicio}}</a></div>
+
               </div>
             </div>
 
