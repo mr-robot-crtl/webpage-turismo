@@ -992,3 +992,7 @@ section {
 html .row-50 {
 	margin-bottom: -50px;
 }
+.rounded-circle {
+    border-radius: 50% !important;
+    padding: 35px;
+}

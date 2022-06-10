@@ -7,43 +7,57 @@
 <br /><br />
 
 <div class="container">
-  <div class="">
-    <div class="formulario-login">
-      <form method="post" action="" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="nombre">nombre</label>
-          {% render_field userForm.first_name class="form-control"placeholder="First Name" %}
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-md-6">
+          <div class="img-signup"><img src="{% static 'login/image/shipibo-03.jpg' %}" alt=""></div><br>
+          <div><p>Esperemos que tengas una inolvidable experiencia</p></div>
         </div>
-        <div class="form-group">
-          <label for="apellido">apellido</label>
-          {% render_field userForm.last_name class="form-control"placeholder="Last Name" %}
+        <div class="col-md-6">
+          <div class="formulario-login ">
+            <form method="post" action="" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                {% render_field userForm.first_name class="form-control"placeholder="First Name" %}
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                {% render_field userForm.last_name class="form-control"placeholder="Last Name" %}
+              </div>
+              <div class="form-group">
+                <label for="usuario">Usuario</label>
+                {% render_field userForm.username class="form-control"placeholder="Username" %}
+              </div>
+              <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                {% render_field userForm.password class="form-control"placeholder="Password" %}
+              </div>
+              <div class="form-group">
+                <label for="pais">Pais</label>
+                {% render_field clienteForm.address class="form-control"placeholder="Pais" %}
+              </div>
+              <div class="form-group">
+                <label for="celular">Celular</label>
+                {% render_field clienteForm.mobile class="form-control"placeholder="Mobile" %}
+              </div>
+              <div class="form-group">
+                <label for="perfil">Perfil</label>
+                {% render_field clienteForm.profile_pic class="form-control"placeholder="Profile pic" %}
+              </div>
+              <input type="submit" name="" value="Create" />
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="usuario">usuario</label>
-          {% render_field userForm.username class="form-control"placeholder="Username" %}
-        </div>
-        <div class="form-group">
-          <label for="contraseña">contraseña</label>
-          {% render_field userForm.password class="form-control"placeholder="Password" %}
-        </div>
-        <div class="form-group">
-          <label for="pais">Pais</label>
-          {% render_field clienteForm.address class="form-control"placeholder="Pais" %}
-        </div>
-        <div class="form-group">
-          <label for="celular">Celular</label>
-          {% render_field clienteForm.mobile class="form-control"placeholder="Mobile" %}
-        </div>
-        <div class="form-group">
-          <label for="perfil">perfil</label>
-          {% render_field clienteForm.profile_pic class="form-control"placeholder="Profile pic" %}
-        </div>
-        <input type="submit" name="" value="Create" />
-      </form>
+
+      </div>
     </div>
+
+    
   </div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
   {% endblock %}
-  <br /><br /><br /><br /><br /><br /><br /><br /><br />
+ 
 </div>

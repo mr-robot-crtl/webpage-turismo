@@ -22,7 +22,7 @@ urlpatterns = [
 
     path('cliente-home', views.cliente_home_view,name='cliente-home'),
 
-    path('detail-services', views.detail_services,name='Detail-services'),
+    path('detail-services/<int:servicio_id>/', views.detail_services,name='Detail-services'),
 
     path('my-profile', views.my_profile_view,name='my-profile'),
     path('edit-profile', views.edit_profile_view,name='edit-profile'),

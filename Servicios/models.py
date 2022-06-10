@@ -14,13 +14,7 @@ class Guia_tour(models.Model):
         return self.name
 
 
-class Detail_servicio(models.Model):
-    name=models.CharField(max_length=40)
-    detail=models.CharField(max_length=40)
-    recommendation=models.CharField(max_length=40)
-    guia_tour=models.ForeignKey(Guia_tour, null=True, on_delete=models.SET_NULL)
-    def __str__(self):
-        return self.name
+
 
 
 class Servicio(models.Model):
@@ -28,7 +22,15 @@ class Servicio(models.Model):
     servicio_image= models.ImageField(upload_to='servicio_image/',null=True,blank=True)
     price = models.PositiveIntegerField()
     description=models.CharField(max_length=40)
-    detail_servicio=models.OneToOneField(Detail_servicio, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return self.name
+
+class Detail_servicio(models.Model):
+    name=models.CharField(max_length=40)
+    detail=models.CharField(max_length=40)
+    recommendation=models.CharField(max_length=40)
+    servicio=models.OneToOneField(Servicio, null=True, on_delete=models.SET_NULL)
+    guia_tour=models.ForeignKey(Guia_tour, null=True, on_delete=models.SET_NULL)
     def __str__(self):
         return self.name
 

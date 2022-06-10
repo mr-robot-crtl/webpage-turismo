@@ -138,43 +138,13 @@
 }
 
 .formulario-login {
-	margin: auto 20pc auto 20pc;
-	color: black;
-	border: 1px solid skyblue;
-	padding: 20px;
+	margin: auto 5pc auto 5pc;
+    color: black;
+    border: 1px solid #cfcfcf;
+    padding: 20px;
+    background-color: #f2fdff;
 
 }
-
-/*------------------
-cliente-home
--------------------*/
-/*body,
-html {
-  height: 100%;
-}*/
-
-.d-flex {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.align-center {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.flex-centerY-centerX {
-	justify-content: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
 /*body {
   background-color:#8c9eff;
 }*/
@@ -641,4 +611,8 @@ my profile
 .button:hover span:after {
 	opacity: 1;
 	right: 0;
+}
+
+.img-signup img{
+	width: 100%;
 }

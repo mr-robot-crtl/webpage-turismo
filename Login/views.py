@@ -78,9 +78,10 @@ def cliente_home_view(request):
 
 
 
-def detail_services(request):
-    details=Detail_servicio.objects.all()
-    return render(request, "ecom/detail_services.html",{"details":details})
+def detail_services(request, servicio_id):
+    servicios=Servicio.objects.get(id=servicio_id)
+    details=Detail_servicio.objects.filter(servicio=servicios)
+    return render(request, "ecom/detail_services.html",{"details":details,'servicios':servicios})
 
 
 
