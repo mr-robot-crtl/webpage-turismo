@@ -1,68 +1,56 @@
-{% extends 'ecom/admin_base.html' %}
+{% extends 'core/admin_base.html' %}
 {% load static %}
 {% block content %}
 
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
 
-<head>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-  <style media="screen">
-    a:link {
-      text-decoration: none;
-    }
-
-    h6 {
-      text-align: center;
-    }
-
-    .row {
-      margin: 100px;
-    }
-  </style>
-</head>
-<div class="container">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h6 class="panel-title">Total Orders</h6>
-    </div>
-    <table class="table table-hover" id="dev-table">
-      <thead>
+<section>
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title">Total Orders</h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Cliente Name</th>
+            <th>Cliente Mobile</th>
+            <th>Shipment Address</th>
+            <th>Servicio Name</th>
+            <th>Servicio Picture</th>
+            <th>Status</th>
+            <th>Update Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <!-- p for servicio, c for cliente-->
+        {% for servicio,cliente,order in data %}
         <tr>
-          <th>Cliente Name</th>
-          <th>Cliente Mobile</th>
-          <th>Shipment Address</th>
-          <th>Servicio Name</th>
-          <th>Servicio Picture</th>
-          <th>Status</th>
-          <th>Update Status</th>
-          <th>Delete</th>
+          {% for c in cliente %}
+          <td> {{c.get_name}}</td>
+          <td>{{c.mobile}}</td>
+          <td>{{order.address}}</td>
+  
+          {% endfor %}
+          {% for p in servicio %}
+          <td> {{p.name}}</td>
+          <td> <img src="{{ p.servicio_image.url }}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td>{{order.status}}</td>
+          <td><a class="btn btn-primary btn-xs" href="{% url 'update-order' order.id  %}"><i class="fa-solid fa-pen"></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'delete-order' order.id  %}"><i class="fa-solid fa-trash-can"></i></a></td>
+  
+          {% endfor %}
+  
+  
+  
         </tr>
-      </thead>
-      <!-- p for servicio, c for cliente-->
-      {% for servicio,cliente,order in data %}
-      <tr>
-        {% for c in cliente %}
-        <td> {{c.get_name}}</td>
-        <td>{{c.mobile}}</td>
-        <td>{{order.address}}</td>
-
         {% endfor %}
-        {% for p in servicio %}
-        <td> {{p.name}}</td>
-        <td> <img src="{% static p.servicio_image.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
-        <td>{{order.status}}</td>
-        <td><a class="btn btn-primary btn-xs" href="{% url 'update-order' order.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>
-        <td><a class="btn btn-danger btn-xs" href="{% url 'delete-order' order.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
-
-        {% endfor %}
-
-
-
-      </tr>
-      {% endfor %}
-    </table>
+      </table>
+    </div>
   </div>
-</div>
+
+</section>
+
 {% endblock content %}

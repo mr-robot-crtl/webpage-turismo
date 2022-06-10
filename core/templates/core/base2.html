@@ -12,6 +12,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      <!-- ARCHICO static PARA QUE PUEDAN CARGARSE TODAS LOS ARCHIVOS DENTRO DE ELLA-->
      {% load static %}
+     
 
      <link rel="stylesheet" href="{% static 'webpage/css/bootstrap.min.css' %}">
      <link rel="stylesheet" href="{% static 'webpage/css/font-awesome.min.css' %}">
@@ -22,11 +23,27 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{% static 'webpage/css/templatemo-style.css' %}">
+     <link rel="stylesheet" href="{% static 'webpage/css/style.css' %}">
      <link rel="stylesheet" href="{% static 'Places/css/style.css' %}">
-     <link rel="stylesheet" href="{% static 'Login/css/style.css' %}">
-     <link rel="stylesheet" href="{% static 'Servicess/css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'servicios/css/style.css' %}">
      <link rel="stylesheet" href="{% static 'Tours/css/style.css' %}">
+     <!-- CLIMA -->
+     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+     <link href="{% static 'Clima/fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="{% static 'Clima/css/style.css' %}">
+     <!-- templlates -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="{% static 'webpage/css/css_t/bootstrap.css' %}">
+     <link rel="stylesheet" href="{% static 'webpage/css/css_t/style.css' %}">
+     <!-- FOOTER -->
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'webpage/css/footer/bootstrap.min.css' %}">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'webpage/css/footer/style.css' %}">
 
+     
 
 
 
@@ -41,42 +58,27 @@
                
           </div>
      </section>
-     <div style="text-align: right; margin-right:100px; color: red;">
-          {% if user.is_authenticated %}
-          Hola {{user.username}}&nbsp;&nbsp;<a href="{% url 'CerrarSesion' %}">CerrarSesion</a>
-          {% else %}
-          <a href="#">Login</a>&nbsp; <a href="{% url 'Autenticacion' %}"></a>
-          {% endif %}
-        </div>
-
      <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-                    <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Astral <span>.</span> Tours</a>
-               </div>
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="{% url 'Home' %}" class="smoothScroll">Home</a></li>
-                         <li><a href="{% url 'Tours' %}" class="smoothScroll">Tours</a></li>
-                         <li><a href="{% url 'Places' %}" class="smoothScroll">Lugares</a></li>
-                         <li><a href="{% url 'Servicio' %}" class="smoothScroll">Servicios</a></li>
-                         <li><a href="" class="smoothScroll">Inicio Sesion</a></li>
-               </div>
-          </div>
-     </section>
+     {%if request.user.is_authenticated%}
+        {% include "core/cliente_navbar.html" %}
+     {%else%}
+       {% include "core/navbar.html" %}
+     {%endif%}
+    
+    
+
+
+
      <!-- DENTRO DE ESTE CODIGO DE block LAS DEMAS PAGINAS DEBEN INTRODUCIR SU CONTENIDO PROPIO -->
      {% block content  %}
 
      {% endblock  %}
 
+
+
+
+     <!-- SCRIPTS -->
+     <!--script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(218099)</script-->
 
      <script src="{% static 'webpage/js/jquery.js' %}"></script>
      <script src="{% static 'webpage/js/bootstrap.min.js' %}"></script>
@@ -86,5 +88,13 @@
      <script src="{% static 'webpage/js/jquery.magnific-popup.min.js' %}"></script>
      <script src="{% static 'webpage/js/smoothscroll.js' %}"></script>
      <script src="{% static 'webpage/js/custom.js' %}"></script>
+
+     <!-- SCRIPTS API CLIMA -->
+     <script src="{%static 'Clima/js/jquery-1.11.1.min.js' %}"></script>
+     <script src="{%static 'Clima/js/plugins.js' %}"></script>
+     <script src="{%static 'Clima/js/app.js' %}"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 </html>

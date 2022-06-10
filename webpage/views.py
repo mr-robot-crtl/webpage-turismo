@@ -11,3 +11,6 @@ def home(request):
 
 def about_pucallpa(request):
     return render(request, "webpage/about-pucallpa.html")
+
+def diccionario_selva(request):
+    return render(request, "webpage/diccionario_selva.html")

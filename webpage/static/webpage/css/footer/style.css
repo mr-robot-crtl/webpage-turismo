@@ -11,7 +11,9 @@
     color: #fff;
     margin-bottom: 30px; }
   .footer-32892 p {
-    font-family: "Source Serif Pro", serif; }
+    font-family: "Source Serif Pro", serif; 
+    color: #757575 !important;
+  }
   .footer-32892 .row.gallery {
     margin-right: -5px;
     margin-left: -5px; }

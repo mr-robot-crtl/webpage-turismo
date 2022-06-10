@@ -1,0 +1,22 @@
+{% extends 'core/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+
+<section class="view_feedback">
+  
+<h2 style="text-align:center; color:blue;">Feedbacks By User</h2>
+<hr>
+
+{%for f in feedbacks%}
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>{{f.date}} ||By : {{f.name}} </strong><br> {{f.feedback}}
+  </div>
+  {%endfor%}
+</section>
+
+{% endblock content %}

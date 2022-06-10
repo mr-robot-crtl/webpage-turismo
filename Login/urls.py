@@ -15,14 +15,17 @@ urlpatterns = [
     path('logout', LogoutView.as_view(template_name='ecom/logout.html'),name='logout'),
 
     path('adminlogin', LoginView.as_view(template_name='ecom/adminlogin.html'),name='adminlogin'),
-
+    path('se/clientesignup', views.cliente_signup_view),
     path('clientesignup', views.cliente_signup_view),
     path('se/clientelogin', LoginView.as_view(template_name='ecom/clientelogin.html'),name='clientelogin'),
     path('clientelogin', LoginView.as_view(template_name='ecom/clientelogin.html'),name='clientelogin'),
 
     path('cliente-home', views.cliente_home_view,name='cliente-home'),
+
+    path('detail-services', views.detail_services,name='Detail-services'),
+
     path('my-profile', views.my_profile_view,name='my-profile'),
     path('edit-profile', views.edit_profile_view,name='edit-profile'),
-    path('download-invoice/<int:orderID>/<int:productID>', views.download_invoice_view,name='download-invoice'),
+    path('download-invoice/<int:orderID>/<int:servicioID>', views.download_invoice_view,name='download-invoice'),
 
 ]

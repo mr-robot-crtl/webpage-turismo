@@ -1,7 +1,7 @@
 import imp
 from django.shortcuts import render,redirect,reverse
 from reserva.models import Orders
-from servicios.models import Servicio
+from servicios.models import Detail_servicio, Servicio
 from login.models import Cliente, User
 from login.forms import ClienteForm, ClienteUserForm
 from django.http import HttpResponseRedirect,HttpResponse
@@ -78,6 +78,12 @@ def cliente_home_view(request):
 
 
 
+def detail_services(request):
+    details=Detail_servicio.objects.all()
+    return render(request, "ecom/detail_services.html",{"details":details})
+
+
+
 
 
 
@@ -141,7 +147,7 @@ def edit_profile_view(request):
     cliente=Cliente.objects.get(user_id=request.user.id)
     user=User.objects.get(id=cliente.user_id)
     userForm=ClienteUserForm(instance=user)
-    clienteForm=ClienteForm(request.FILES,instance=cliente)
+    clienteForm=ClienteForm(instance=cliente)
     mydict={'userForm':userForm,'clienteForm':clienteForm}
     if request.method=='POST':
         userForm=ClienteUserForm(request.POST,instance=user)

@@ -1,13 +1,7 @@
 {% extends 'core/base.html' %} {% load static %} {% block content %}
 
-
-
-  
-
 <section id="banner" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
-
-  </div>
 </section>
 
 {%if servicios%}
@@ -22,31 +16,24 @@
         <div class="card-body">
           <div class="el-wrapper">
             <div class="box-up">
-              <img
-                class="img"
-                src="{{p.servicio_image.url}}"
-                alt="servicio pic"
-                height="300px"
-                width="300px"
-              />
+              <img class="img" src="{{p.servicio_image.url}}" alt="servicio pic" height="300px" width="300px"/>
               <div class="img-info">
                 <div class="info-inner">
                   <span
-                    class="p-company"
-                    >{{p.name}}</span
-                  >
+                    class="p-company">{{p.name}}</span>
                 </div>
                 <div class="a-size">{{p.description}}</div>
+
+                <div class="a-size"><a href="{% url 'Detail-services' %} ">{{p.detail_servicio}}</a></div>
               </div>
             </div>
-
             <div class="box-down">
               <div class="h-bg">
                 <div class="h-bg-inner"></div>
               </div>
 
               <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                <span class="price">₱ {{p.price}}</span>
+                <span class="price">S/. {{p.price}}</span>
                 <span class="add-to-cart">
                   <span class="txt">Add in cart</span>
                 </span>
@@ -69,15 +56,5 @@
   {%endif%}
 </section>
 
-
-
-<script>
-  {%if messages %}
-  {%for message in messages%}
-  alert('{{message}}');
-  {%endfor%}
-  {%endif%}
-</script>
-<br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 {% endblock content %}

@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-#from django.contrib.messages import constants as msj_error
+from django.contrib.messages import constants as msj_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,14 +92,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'AstralTour_db',
-        'USER': 'postgres',
-        'PASSWORD':'joseazaz',
-        'HOST': 'localhost',
-        'PORT': 8080
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'AstralTour_db',
+        #'USER': 'postgres',
+        #'PASSWORD':'joseazaz',
+        #'HOST': 'localhost',
+        #'PORT': 8080
         #'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -151,12 +151,27 @@ LOGIN_REDIRECT_URL='/afterlogin'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 #config email
-EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_USE_TLS=True
-EMAIL_PORT=587
-EMAIL_HOST_USER="juancitodelbarrio47@gmail.com"
-EMAIL_HOST_PASSWORD="juandelbarriopkmz"
+#for contact us give your gmail id and password
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'juancitodelbarrio47@gmail.com' # this email will be used to send emails
+EMAIL_HOST_PASSWORD = 'juandelbarriopkmz' # host email password required
+# now sign in with your host gmail account in your browser
+# open following link and turn it ON
+# https://myaccount.google.com/lesssecureapps
+# otherwise you will get SMTPAuthenticationError at /contactus
+# this process is required because google blocks apps authentication by default
+EMAIL_RECEIVING_USER = ['rapernoe9@gmail.com'] # email on which you will receive messages sent from website
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK='bootstrap'
+MESSAGE_TAGS={
+    msj_error.DEBUG: 'debug',
+    msj_error.INFO: 'info',
+    msj_error.SUCCESS: 'success',
+    msj_error.WARNING: 'warnig',
+    msj_error.ERROR: 'danger',
+    
+}

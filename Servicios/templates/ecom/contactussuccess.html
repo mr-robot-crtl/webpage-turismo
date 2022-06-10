@@ -1,39 +1,24 @@
-<!DOCTYPE html>
+
+{% extends 'core/base2.html' %}
 {% load static %}
-<html lang="en" dir="ltr">
+{% block content %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-  <title>E-Commerce</title>
-  <style media="screen">
-    .jumbotron {
-      margin-bottom: 0px;
-    }
-
-    .jumbotron h1 {
-      text-align: center;
-    }
-  </style>
-
-</head>
-
-<body style="background-color: #B3E5FC;">
-
-  {% include "ecom/navbar.html" %}
-  <br><br>
-  <div class="jumbotron">
-    <h1 class="display-4">Your message sent successfully !</h1>
-    <p class="lead">We will respond to your feedback soon</p>
-    <hr class="my-4">
-    <p>Check other features of website !</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
-    </p>
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+<br><br><br><br>
+<section>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Su mensaje fue enviado con éxito!</h1>
+      <p class="lead">Responderemos a sus comentarios pronto</p>
+      <hr class="my-4">
+      <p>Compruebe otras características del sitio web!</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="" role="button">HOME</a>
+      </p>
+    </div>
   </div>
+</section>
+{% endblock  %}
 
-  {% include "ecom/footer.html" %}
-</body>
-</html>
