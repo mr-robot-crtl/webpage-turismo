@@ -1,13 +1,13 @@
 import imp
-from django.shortcuts import render,redirect,reverse
+from django.shortcuts import render,redirect
 from . import forms,models
 from login.views import is_cliente
 from django.http import HttpResponseRedirect,HttpResponse
-from django.core.mail import send_mail
+
 from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.contrib import messages
-from django.conf import settings
+
 
 def home_view(request):
     servicios=models.Servicio.objects.all()
@@ -137,42 +137,12 @@ def remove_from_cart_view(request,pk):
         response.set_cookie('servicio_ids',value)
         return response
 
-
-def send_feedback_view(request):
-    feedbackForm=forms.FeedbackForm()
-    if request.method == 'POST':
-        feedbackForm = forms.FeedbackForm(request.POST)
-        if feedbackForm.is_valid():
-            feedbackForm.save()
-            return render(request, 'ecom/feedback_sent.html')
-    return render(request, 'ecom/send_feedback.html', {'feedbackForm':feedbackForm})
-
-
-#---------------------------------------------------------------------------------
-#------------------------ CLIENTE RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
-
-
-#---------------------------------------------------------------------------------
-#------------------------ ABOUT US AND CONTACT US VIEWS START --------------------
-#---------------------------------------------------------------------------------
-def aboutus_view(request):
-    return render(request,'ecom/aboutus.html')
-
-def contactus_view(request):
-    sub = forms.ContactusForm()
-    if request.method == 'POST':
-        sub = forms.ContactusForm(request.POST)
-        if sub.is_valid():
-            email = sub.cleaned_data['Email']
-            name=sub.cleaned_data['Name']
-            message = sub.cleaned_data['Message']
-            send_mail(str(name)+' || '+str(email),message, settings.EMAIL_HOST_USER, settings.EMAIL_RECEIVING_USER, fail_silently = False)
-            return render(request, 'ecom/contactussuccess.html')
-    return render(request, 'ecom/contactus.html', {'form':sub})
-
 def afterlogin_view(request):
     if is_cliente(request.user):
         return redirect('cliente-home')
     else:
         return redirect('admin-dashboard')
+
+
+
+

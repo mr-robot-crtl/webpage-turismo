@@ -10,10 +10,9 @@ urlpatterns = [
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
     path('se/',views.home_view,name='Servicios'),
    
-    path('aboutus', views.aboutus_view),
-    path('contactus', views.contactus_view,name='contactus'),
+ 
     path('search', views.search_view,name='search'),
-    path('send-feedback', views.send_feedback_view,name='send-feedback'),
+
 
 
 

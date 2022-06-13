@@ -4,6 +4,8 @@ from admins import views
 
 from django.contrib.auth.views import LoginView,LogoutView
 urlpatterns = [
+    path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
+    path('admin-view-booking', views.admin_view_booking_view,name='admin-view-booking'),
     path('view-feedback', views.view_feedback_view,name='view-feedback'),
     path('adminclick', views.adminclick_view),
     

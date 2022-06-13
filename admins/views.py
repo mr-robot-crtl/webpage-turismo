@@ -1,13 +1,51 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required,user_passes_test
-
+from webpage.models import Feedback
+from reserva.models import Orders
 from login.models import Cliente, User
 from login.forms import ClienteForm, ClienteUserForm
-from servicios.models import Servicio, Feedback
+from servicios.models import Servicio
 from servicios.forms import ServicioForm
 
 
+# Create your views here.
+@login_required(login_url='adminlogin')
+def admin_dashboard_view(request):
+    # for cards on dashboard
+    clientecount=Cliente.objects.all().count()
+    serviciocount=Servicio.objects.all().count()
+    ordercount=Orders.objects.all().count()
+
+    # for recent order tables
+    orders=Orders.objects.all()
+    ordered_servicios=[]
+    ordered_bys=[]
+    for order in orders:
+        ordered_servicio=Servicio.objects.all().filter(id=order.servicio.id)
+        ordered_by=Cliente.objects.all().filter(id = order.cliente.id)
+        ordered_servicios.append(ordered_servicio)
+        ordered_bys.append(ordered_by)
+
+    mydict={
+    'clientecount':clientecount,
+    'serviciocount':serviciocount,
+    'ordercount':ordercount,
+    'data':zip(ordered_servicios,ordered_bys,orders),
+    }
+    return render(request,'ecom/admin_dashboard.html',context=mydict)
+
+@login_required(login_url='adminlogin')
+def admin_view_booking_view(request):
+    orders=Orders.objects.all()
+    ordered_servicios=[]
+    ordered_bys=[]
+    for order in orders:
+        ordered_servicio=Servicio.objects.all().filter(id=order.servicio.id)
+        ordered_by=Cliente.objects.all().filter(id = order.cliente.id)
+        ordered_servicios.append(ordered_servicio)
+        ordered_bys.append(ordered_by)
+    return render(request,'ecom/admin_view_booking.html',{'data':zip(ordered_servicios,ordered_bys,orders)})
 
 # Create your views here.
 #for showing login button for admin(by sumit)

@@ -1,20 +1,21 @@
-{% extends 'core/base2.html' %} {% load static %} {% load widget_tweaks %} 
+{% extends 'core/base.html' %} {% load static %} {% load widget_tweaks %} 
 {%block content %}
-<section id="banner2" data-stellar-background-ratio="0.5">
+
+<section id="banner" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
 </section>
-<br /><br /><br /><br />
-<br /><br />
 
+<br /><br /><br /><br />
 <div class="container">
   <div class="row">
     <div class="card">
       <div class="card-body">
         <div class="col-md-6">
-          <div class="img-signup"><img src="{% static 'login/image/shipibo-03.jpg' %}" alt=""></div><br>
-          <div><p>Esperemos que tengas una inolvidable experiencia</p></div>
+          <div class="img-signup"><img src="{% static 'login/image/shipibo-04.jpg' %}" alt=""></div><br>
+          
         </div>
         <div class="col-md-6">
+          <div class="title-register"><h2>Register</h2></div>
           <div class="formulario-login ">
             <form method="post" action="" enctype="multipart/form-data">
               {% csrf_token %}
@@ -46,9 +47,11 @@
                 <label for="perfil">Perfil</label>
                 {% render_field clienteForm.profile_pic class="form-control"placeholder="Profile pic" %}
               </div>
-              <input type="submit" name="" value="Create" />
+              <div class="register-btn"><input type="submit" name="" value="Register" /></div>
+              
             </form>
           </div>
+          <div class="tittle-register"><p>Esperemos que tengas una inolvidable experiencia</p></div>
         </div>
 
       </div>
@@ -56,8 +59,9 @@
 
     
   </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br />
+  
 
-  {% endblock %}
+ 
  
 </div>
+{% endblock %}

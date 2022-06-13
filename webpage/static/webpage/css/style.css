@@ -292,3 +292,17 @@ DICCIONARIO
 .nav-diccionario a:hover{
   color: #575757;
 }
+
+  /*--------------
+  contact us
+  ---------------*/
+
+  .form-border{
+    border: 1px solid skyblue;
+    margin: 0px 10em 0px 10em;
+  }
+  .form-contactus input, textarea{
+    margin: 10px !important;
+    width: 100% !important;
+    border: 1px solid skyblue;
+  }

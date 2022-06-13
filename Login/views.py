@@ -9,10 +9,6 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.conf import settings
 
-
-
-
-
 def cliente_signup_view(request):
     userForm=ClienteUserForm()
     clienteForm=ClienteForm()
@@ -37,33 +33,6 @@ def is_cliente(user):
     return user.groups.filter(name='CLIENTE').exists()
 
 
-
-#---------AFTER ENTERING CREDENTIALS WE CHECK WHETHER USERNAME AND PASSWORD IS OF ADMIN,CLIENTE
-
-
-
-
-#---------------------------------------------------------------------------------
-#------------------------ ADMIN RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
-
-
-
-#
-
-
-
-#---------------------------------------------------------------------------------
-#------------------------ PUBLIC Cliente RELATED VIEWS START ---------------------
-#---------------------------------------------------------------------------------
-
-
-
-
-
-#---------------------------------------------------------------------------------
-#------------------------ CLIENTE RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
 @login_required(login_url='clientelogin')
 @user_passes_test(is_cliente)
 def cliente_home_view(request):
