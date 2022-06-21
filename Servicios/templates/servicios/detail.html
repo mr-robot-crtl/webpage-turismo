@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+
+<section>
+    {% for d in details%}
+    <div class="detail-servicio">
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <div><h3>{{d.name}}</h3></div>
+                <div class="img"><img src="{{d.de_place_image.url}}" alt=""></div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <div><h3>{{d.detail}}</h3></div>
+                <div><h3>{{d.recommendation}}</h3></div>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <div><h3>Guia a cargo: {{d.guia_tour}}</h3></div>
+                <div><h3>Lugar asignado: {{d.place_tour}}</h3></div>
+                <div><h3>Incluye: {{d.place_tour}}</h3></div>
+    
+            </div>
+    
+        </div>
+        
+
+    </div>
+
+    
+
+    
+
+    {% endfor %}
+  
+</section>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@ from .models import Orders
 from reserva.forms import OrderForm, AddressForm
 from login.models import Cliente
 from login.views import is_cliente
-from servicios.models import Servicio
+from servicios.models import Place_Tour
 
 # shipment address before placing order
 @login_required(login_url='clientelogin')
@@ -46,12 +46,12 @@ def cliente_address_view(request):
                 servicio_ids = request.COOKIES['servicio_ids']
                 if servicio_ids != "":
                     servicio_id_in_cart=servicio_ids.split('|')
-                    servicios=Servicio.objects.all().filter(id__in = servicio_id_in_cart)
+                    servicios=Place_Tour.objects.all().filter(id__in = servicio_id_in_cart)
                     for p in servicios:
                         #total=(total+p.price)
                         total=(num_a*p.price)+(num_n*p.price)
 
-            response = render(request, 'ecom/payment.html',{'total':total})
+            response = render(request, 'pago/payment.html',{'total':total})
             response.set_cookie('email',email)
             response.set_cookie('mobile',mobile)
             response.set_cookie('address',address)
@@ -59,7 +59,7 @@ def cliente_address_view(request):
             response.set_cookie('num_a',num_a)
             response.set_cookie('num_b',num_n)
             return response
-    return render(request,'ecom/cliente_address.html',{'addressForm':addressForm,'servicio_in_cart':servicio_in_cart,'servicio_count_in_cart':servicio_count_in_cart})
+    return render(request,'reserva/cliente_address.html',{'addressForm':addressForm,'servicio_in_cart':servicio_in_cart,'servicio_count_in_cart':servicio_count_in_cart})
 
 @login_required(login_url='clientelogin')
 @user_passes_test(is_cliente)
@@ -68,10 +68,10 @@ def my_order_view(request):
     orders=Orders.objects.all().filter(cliente_id = cliente)
     ordered_servicios=[]
     for order in orders:
-        ordered_servicio=Servicio.objects.all().filter(id=order.servicio.id)
+        ordered_servicio=Place_Tour.objects.all().filter(id=order.place_tour.id)
         ordered_servicios.append(ordered_servicio)
 
-    return render(request,'ecom/my_order.html',{'data':zip(ordered_servicios,orders)})
+    return render(request,'reserva/my_order.html',{'data':zip(ordered_servicios,orders)})
 
 # for changing status of order (pending,delivered...)
 @login_required(login_url='adminlogin')
@@ -83,7 +83,7 @@ def update_order_view(request,pk):
         if orderForm.is_valid():
             orderForm.save()
             return redirect('admin-view-booking')
-    return render(request,'ecom/update_order.html',{'orderForm':orderForm})
+    return render(request,'reserva/update_order.html',{'orderForm':orderForm})
 
 @login_required(login_url='adminlogin')
 def delete_order_view(request,pk):

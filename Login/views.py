@@ -1,7 +1,7 @@
 import imp
 from django.shortcuts import render,redirect,reverse
 from reserva.models import Orders
-from servicios.models import Detail_servicio, Servicio
+from servicios.models import Place_Tour
 from login.models import Cliente, User
 from login.forms import ClienteForm, ClienteUserForm
 from django.http import HttpResponseRedirect,HttpResponse
@@ -26,38 +26,11 @@ def cliente_signup_view(request):
             my_cliente_group = Group.objects.get_or_create(name='CLIENTE')
             my_cliente_group[0].user_set.add(user)
         return HttpResponseRedirect('clientelogin')
-    return render(request,'ecom/clientesignup.html',context=mydict)
+    return render(request,'login/clientesignup.html',context=mydict)
 
 #-----------for checking user iscliente
 def is_cliente(user):
     return user.groups.filter(name='CLIENTE').exists()
-
-
-@login_required(login_url='clientelogin')
-@user_passes_test(is_cliente)
-def cliente_home_view(request):
-    servicios=Servicio.objects.all()
-    if 'servicio_ids' in request.COOKIES:
-        servicio_ids = request.COOKIES['servicio_ids']
-        counter=servicio_ids.split('|')
-        servicio_count_in_cart=len(set(counter))
-    else:
-        servicio_count_in_cart=0
-    return render(request,'ecom/index.html',{'servicios':servicios,'servicio_count_in_cart':servicio_count_in_cart})
-
-
-
-def detail_services(request, servicio_id):
-    servicios=Servicio.objects.get(id=servicio_id)
-    details=Detail_servicio.objects.filter(servicio=servicios)
-    return render(request, "ecom/detail_services.html",{"details":details,'servicios':servicios})
-
-
-
-
-
-
-
 
 
 #--------------for discharge patient bill (pdf) download and printing
@@ -81,7 +54,7 @@ def render_to_pdf(template_src, context_dict):
 @user_passes_test(is_cliente)
 def download_invoice_view(request,orderID,servicioID):
     order=Orders.objects.get(id=orderID)
-    servicio=Servicio.objects.get(id=servicioID)
+    servicio=Place_Tour.objects.get(id=servicioID)
     mydict={
         'orderDate':order.order_date,
         'clienteName':request.user,
@@ -97,18 +70,14 @@ def download_invoice_view(request,orderID,servicioID):
 
 
     }
-    return render_to_pdf('ecom/download_invoice.html',mydict)
-
-
-
-
+    return render_to_pdf('login/download_invoice.html',mydict)
 
 
 @login_required(login_url='clientelogin')
 @user_passes_test(is_cliente)
 def my_profile_view(request):
     cliente=Cliente.objects.get(user_id=request.user.id)
-    return render(request,'ecom/my_profile.html',{'cliente':cliente})
+    return render(request,'login/my_profile.html',{'cliente':cliente})
 
 
 @login_required(login_url='clientelogin')
@@ -128,11 +97,12 @@ def edit_profile_view(request):
             user.save()
             clienteForm.save()
             return HttpResponseRedirect('my-profile')
-    return render(request,'ecom/edit_profile.html',context=mydict)
+    return render(request,'login/edit_profile.html',context=mydict)
 
 
 
 #---------------------------------------------------------------------------------
 #------------------------ ABOUT US AND CONTACT US VIEWS START --------------------
 #---------------------------------------------------------------------------------
+
 

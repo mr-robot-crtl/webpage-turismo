@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %} {% load static %} {% block content %}
+
+<section id="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+
+<section>
+  {%if servicios%}
+  <section class="container">
+    <div class="">
+      <div class="row">
+        {% for p in servicios %}
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div  class="servicio">
+                <div><img class="img" src="{{p.place_image.url}}" alt="servicio pic"/></div>
+                <div class="serv-conten">
+                  <div class="name"><span>{{p.name}}</span></div>
+                  <div class="detail"><a href="{% url 'detail' p.id  %} ">{{p.detail_place_tour}}</a></div>
+                  <div class="price">
+                    <div><h5>Price: {{p.price}} <span class="price-menor">/ Menores {{menor_price}}</span> </h5></div>
+                  </div>
+                  <div class="add-cart" ><a href="{% url 'add-to-cart' p.id  %}">
+                      <span class="">Add in cart</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <!-- card1 end -->
+          {% if forloop.counter|divisibleby:"4" %}
+    </div>
+
+    </div>
+
+        {% endif %} 
+      {% endfor %}
+  </section>
+    {%else%}
+    <h3 style="text-align: center; color: yellow">No Search Found</h3>
+  {%endif%}
+  
+  <section>
+    {% for g in guiass %}
+    <div><p>{{g.name}}</p></div>
+    {% endfor %}
+  </section>
+</section>
+
+{% endblock content %}
+
+
+
+

@@ -1,9 +1,10 @@
 from django import forms
 from . import models
 
-class ServicioForm(forms.ModelForm):
+
+class PlaceTourForm(forms.ModelForm):
     class Meta:
-        model=models.Servicio
-        fields=['name','price','description','servicio_image']
+        model=models.Place_Tour
+        fields=['name','price','description','place_image']
 
 

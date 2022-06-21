@@ -3,7 +3,11 @@ from Places import views
 
 
 urlpatterns = [
-    path('',views.places, name="Places"),
+    path('',views.category_places, name="Places"),
+    path('lug/<int:category_id>',views.placess, name="Lug"),
+    path('cat',views.category_places, name="Cat"),
+    path('detail-lug/<int:place_id>',views.detail_place, name="detail-lug"),
+
     path('place_cat_aventu',views.place_cat_aventu, name="Place_cat_aventu"),
     path('lug_cat_aventu_lug_01',views.lug_cat_aventu_lug_01, name="lug_cat_aventu_lug_01"),
     path('lug_cat_aventu_lug_02',views.lug_cat_aventu_lug_02, name="lug_cat_aventu_lug_02"),

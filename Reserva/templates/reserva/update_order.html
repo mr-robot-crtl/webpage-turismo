@@ -1,0 +1,25 @@
+{% extends 'core/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<br><br><br><br><br><br>
+<section>
+  <form method="post">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Update Status Of Order</p>
+        </div>
+        <div class="form-content">
+  
+                {% render_field orderForm.status class="form-control" placeholder="Address" %}
+              </div>
+  
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Update</button>
+  </form>
+</section>
+
+{% endblock content %}

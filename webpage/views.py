@@ -3,6 +3,11 @@ from requests import request
 from django.core.mail import send_mail
 
 from django.conf import settings
+
+from .models import Guia_tour
+
+
+
 from . import forms,models
 
 
@@ -10,8 +15,8 @@ from . import forms,models
 # Create your views here.
 
 def home(request):
- 
-    return render(request, "webpage/home.html")
+    guiass=Guia_tour.objects.all()
+    return render(request, "webpage/home.html",{'guiass':guiass})
 
 def about_pucallpa(request):
     return render(request, "webpage/about-pucallpa.html")
@@ -29,9 +34,6 @@ def send_feedback_view(request):
             feedbackForm.save()
             return render(request, 'webpage/feedback_sent.html')
     return render(request, 'webpage/send_feedback.html', {'feedbackForm':feedbackForm})
-
-
-
 
 #---------------------------------------------------------------------------------
 #------------------------ ABOUT US AND CONTACT US VIEWS START --------------------

@@ -2,7 +2,7 @@ import imp
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required,user_passes_test
 from login.models import Cliente
-from servicios.models import Servicio
+from servicios.models import Place_Tour
 from reserva.models import Orders
 
 # Create your views here.
@@ -27,7 +27,7 @@ def payment_success_view(request):
         servicio_ids = request.COOKIES['servicio_ids']
         if servicio_ids != "":
             servicio_id_in_cart=servicio_ids.split('|')
-            servicios=Servicio.objects.all().filter(id__in = servicio_id_in_cart)
+            servicios=Place_Tour.objects.all().filter(id__in = servicio_id_in_cart)
             # Here we get servicios list that will be ordered by one cliente at a time
 
     # these things can be change so accessing at the time of order...
@@ -48,10 +48,10 @@ def payment_success_view(request):
     # suppose if we have 5 items in cart and we place order....so 5 rows will be created in orders table
     # there will be lot of redundant data in orders table...but its become more complicated if we normalize it
     for servicio in servicios:
-        Orders.objects.get_or_create(cliente=cliente,servicio=servicio,status='Pending',email=email,mobile=mobile,address=address,fecha=fecha, num_a=num_a,num_n=num_n)
+        Orders.objects.get_or_create(cliente=cliente,place_tour=servicio,status='Pending',email=email,mobile=mobile,address=address,fecha=fecha, num_a=num_a,num_n=num_n)
 
     # after order placed cookies should be deleted
-    response = render(request,'ecom/payment_success.html')
+    response = render(request,'pago/payment_success.html')
     response.delete_cookie('servicio_ids')
     response.delete_cookie('email')
     response.delete_cookie('mobile')
