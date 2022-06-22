@@ -6,15 +6,14 @@ from tkinter import CASCADE
 from unicodedata import category
 from django.db import models
 from Places.models import Category_Place, Place
-from webpage.models import Guia_tour
 # Create your models here.
 
-'''class Guia_tour(models.Model):
+class Guia_tour(models.Model):
     name=models.CharField(max_length=40)
-    decriptions=models.CharField(max_length=40)
+    decriptions=models.CharField(max_length=500)
     picture=models.ImageField(upload_to='guia_image/')
     def __str__(self):
-        return self.name'''
+        return self.name
 
 '''class Servicio(models.Model):
     name=models.CharField(max_length=40)
@@ -60,7 +59,7 @@ class Detail_Pack_Tour(models.Model):
 
 class Place_Tour(models.Model):
     name=models.CharField(max_length=40)
-    description=models.CharField(max_length=100)
+    description=models.CharField(max_length=1000)
     place_image= models.ImageField(upload_to='place_tour_image/',null=True,blank=True)
     price = models.PositiveIntegerField()
     category=models.OneToOneField(Category_Place,null=True, on_delete=models.SET_NULL)
@@ -72,8 +71,8 @@ class Place_Tour(models.Model):
 class Detail_Place_Tour(models.Model):
     name=models.CharField(max_length=40)
     de_place_image= models.ImageField(upload_to='detail_place_tour_image/',null=True,blank=True)
-    detail=models.CharField(max_length=100)
-    recommendation=models.CharField(max_length=100)
+    detail=models.CharField(max_length=1000)
+    recommendation=models.CharField(max_length=1000)
     place_tour=models.OneToOneField(Place_Tour, null=True, on_delete=models.SET_NULL)
     guia_tour=models.ForeignKey(Guia_tour, null=True, on_delete=models.SET_NULL)
     def __str__(self):

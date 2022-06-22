@@ -18,6 +18,7 @@
                 <div class="serv-conten">
                   <div class="name"><span>{{p.name}}</span></div>
                   <div class="detail"><a href="{% url 'detail' p.id  %} ">{{p.detail_place_tour}}</a></div>
+                  <div class="detail"><h5>Categoria: <span class="price-menor">{{p.category}}</span></h5></div>
                   <div class="price">
                     <div><h5>Price: {{p.price}} <span class="price-menor">/ Menores {{menor_price}}</span> </h5></div>
                   </div>
@@ -43,11 +44,37 @@
     <h3 style="text-align: center; color: yellow">No Search Found</h3>
   {%endif%}
   
-  <section>
-    {% for g in guiass %}
-    <div><p>{{g.name}}</p></div>
-    {% endfor %}
-  </section>
+<!-- NUESTROS GUIAS-->
+<section>
+  <div class="row">
+    <div class=""></div>
+
+  </div>
+</section>
+
+<section class="section section-lg text-center novi-background bg-cover">
+  <div class="container container-wide wow fadeInUp" data-wow-delay="0.1s">
+    <h3>NUESTROS GUIAS</h3>
+    <div class="divider divider-decorate"></div>
+    <div class="row row-50 row-xxl-90 justify-content-sm-center offset-custom-2">
+      {% for g in guiass %}
+      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="team-classic team-classic-circle">
+          <figure>
+            <img class="rounded-circle" src="{{g.picture.url}}" alt="" width="300"height="300"/>
+          </figure>
+          <div class="name-guia">
+            <div class="team-classic-caption">
+              <p>{{g.decriptions}}</p>
+              <h5><a class="team-classic-title" href="#">{{g.name}}</a></h5>
+              <p class="team-classic-job-position">Guia Profesional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% endblock content %}

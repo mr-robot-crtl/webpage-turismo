@@ -9,6 +9,7 @@ urlpatterns = [
     path('servicio/afterlogin', views.afterlogin_view,name='afterlogin'),
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
     path('servicio/',views.home_view,name='Servicios'),
+    path('guia',views.guia_tour,name='guia'),
 
      
     

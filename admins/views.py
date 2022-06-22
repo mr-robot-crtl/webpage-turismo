@@ -22,7 +22,7 @@ def admin_dashboard_view(request):
     ordered_servicios=[]
     ordered_bys=[]
     for order in orders:
-        ordered_servicio=Place_Tour.objects.all().filter(id=order.servicio.id)
+        ordered_servicio=Place_Tour.objects.all().filter(id=order.place_tour.id)
         ordered_by=Cliente.objects.all().filter(id = order.cliente.id)
         ordered_servicios.append(ordered_servicio)
         ordered_bys.append(ordered_by)
@@ -41,7 +41,7 @@ def admin_view_booking_view(request):
     ordered_servicios=[]
     ordered_bys=[]
     for order in orders:
-        ordered_servicio=Place_Tour.objects.all().filter(id=order.servicio.id)
+        ordered_servicio=Place_Tour.objects.all().filter(id=order.place_tour.id)
         ordered_by=Cliente.objects.all().filter(id = order.cliente.id)
         ordered_servicios.append(ordered_servicio)
         ordered_bys.append(ordered_by)

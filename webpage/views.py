@@ -2,9 +2,11 @@ from django.shortcuts import render,redirect, HttpResponse
 from requests import request
 from django.core.mail import send_mail
 
+
 from django.conf import settings
 
-from .models import Guia_tour
+from servicios.models import Guia_tour
+
 
 
 
@@ -15,8 +17,7 @@ from . import forms,models
 # Create your views here.
 
 def home(request):
-    guiass=Guia_tour.objects.all()
-    return render(request, "webpage/home.html",{'guiass':guiass})
+    return render(request, "webpage/home.html")
 
 def about_pucallpa(request):
     return render(request, "webpage/about-pucallpa.html")

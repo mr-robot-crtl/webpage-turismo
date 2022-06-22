@@ -182,6 +182,7 @@ def remove_from_cart_view_pack(request,pk):
 
 def home_view(request):
     servicios=models.Place_Tour.objects.all()
+    guiass=models.Guia_tour.objects.all()
     menor_price=0
     if 'servicio_ids' in request.COOKIES:
         servicio_ids = request.COOKIES['servicio_ids']
@@ -193,7 +194,7 @@ def home_view(request):
         servicio_count_in_cart=0
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
-    return render(request,'servicios/servicios.html',{'servicios':servicios,'menor_price':menor_price,'servicio_count_in_cart':servicio_count_in_cart})
+    return render(request,'servicios/servicios.html',{'servicios':servicios, 'guiass':guiass,'menor_price':menor_price,'servicio_count_in_cart':servicio_count_in_cart})
 
 
 #for showing login button for admin(by sumit)
@@ -339,6 +340,9 @@ def detail(request, place_tour_id):
     details=Detail_Place_Tour.objects.filter(place_tour=places)
     return render(request, "servicios/detail.html",{"details":details,'places':places})
 
+def guia_tour(request):
+    guias2=Guia_tour.objects.all()
+    return render(request,'servicios/servicios.html',{'guias2':guias2})
 
 
 '''def services(request):
