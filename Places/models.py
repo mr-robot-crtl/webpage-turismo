@@ -1,7 +1,7 @@
 from email.mime import image
 from unicodedata import category, name
 from django.db import models
-from numpy import imag
+
 
 # Create your models here.
 class Category_Place(models.Model):
