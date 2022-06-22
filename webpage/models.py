@@ -8,10 +8,3 @@ class Feedback(models.Model):
     def __str__(self):
         return self.name
 
-
-class Guia_tour(models.Model):
-    name=models.CharField(max_length=40)
-    decriptions=models.CharField(max_length=40)
-    picture=models.ImageField(upload_to='guia_image/')
-    def __str__(self):
-        return self.name

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Guia_tour, Place_Tour, Detail_Place_Tour
+from .models import Guia_tour, Place_Tour, Detail_Place_Tour, Movilidad
 
 
 # Register your models here.
@@ -8,6 +8,11 @@ from .models import Guia_tour, Place_Tour, Detail_Place_Tour
 class GuiaAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Guia_tour, GuiaAdmin)
+
+class MovilidadAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Movilidad, MovilidadAdmin)
+
 
 
 class PlaceAdmin(admin.ModelAdmin):

@@ -1,0 +1,43 @@
+{% extends 'core/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+<section class="admin-add-servicios">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>AGREGAR GUIAS TOUR</p>
+        </div>
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field  guiaTourForm.name class="form-control" placeholder="Servicio Name" %}
+              </div>
+              <div class="form-group">
+                {% render_field  guiaTourForm.decriptions class="form-control" placeholder="Description" %}
+              </div>
+  
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field  guiaTourForm.picture class="form-control" placeholder="servicio_image" %}
+              </div>
+  
+  
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</section>
+
+{% endblock content %}

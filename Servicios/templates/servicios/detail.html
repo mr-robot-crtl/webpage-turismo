@@ -5,36 +5,81 @@
 </section>
 
 <section>
-    {% for d in details%}
-    <div class="detail-servicio">
-        <div class="row">
-            <div class="col-xs-6 col-md-4">
-                <div><h3>{{d.name}}</h3></div>
-                <div class="img"><img src="{{d.de_place_image.url}}" alt=""></div>
-            </div>
-            <div class="col-xs-6 col-md-4">
-                <div><h3>{{d.detail}}</h3></div>
-                <div><h3>{{d.recommendation}}</h3></div>
-            </div>
+    <div class="container">
+        {% for d in details%}
+        <div class="detail-servicio">
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <div><h3>{{d.name}}</h3></div>
+                    <div class="awSlider">
+                        <div  class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target=".carousel" data-slide-to="0" class="active"></li>
+                            <li data-target=".carousel" data-slide-to="1"></li>
+                            <li data-target=".carousel" data-slide-to="2"></li>
+                            <li data-target=".carousel" data-slide-to="3"></li>
+                          </ol>
+                       
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="{{d.de_place_image.url}}" alt="">
+                              <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="{{d.de_place_image.url}}" alt="">
+                              <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="{{d.de_place_image.url}}" alt="">
+                              <div class="carousel-caption"></div>
+                            </div>
+                            <div class="item">
+                                <img src="{{d.de_place_image.url}}" alt="">
+                              <div class="carousel-caption"></div>
+                            </div>
+                          </div>
+                
+                          <!-- Controls -->
+                          <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                            <i class="fa-solid fa-caret-left"></i>
+                            <span class="sr-only">Geri</span>
+                          </a>
+                          <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                            <span class="fa-solid fa-caret-right"></i>
+                            <span class="sr-only">İleri</span>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <div><h3>Detail</h3><p>{{d.detail}}</p></div>
+                    <div><h3>Recommendations</h3><p>{{d.recommendation}}</p></div>
+                </div>
+    
+                <div class="col-xs-6 col-md-4">
+                    <div class="detail-sec_three">
+                        <div><h3>Guia a cargo</h3><span>{{d.guia_tour}}</span></div>
+                        <div><h3>Lugar asignado</h3><a href={% url 'detail-lug' d.place_tour.place.id %}>{{d.place_tour.place}}</a></div>
+                        <div><h3>Movilidad: {{d.status_movilidad}}</h3><span>{{d.movilidad}}</span><span>: </span><span>{{d.movilidad.descriptions}}</span></div>
+                     
+                        <div class="add-cart" ><a href="{% url 'add-to-cart' d.place_tour.id  %}">
+                            <span class="">Add in cart</span></a>
+                        </div>
 
-            <div class="col-xs-6 col-md-4">
-                <div><h3>Guia a cargo: {{d.guia_tour}}</h3></div>
-                <div><h3>Lugar asignado: {{d.place_tour}}</h3></div>
-                <div><h3>Incluye: {{d.place_tour}}</h3></div>
-    
-            </div>
-    
-        </div>
+                    </div>
+
+            
+                </div>
         
+            </div> 
+        </div>
+    
+        {% endfor %}
 
     </div>
 
-    
-
-    
-
-    {% endfor %}
-  
 </section>
 
 

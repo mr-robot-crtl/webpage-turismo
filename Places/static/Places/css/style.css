@@ -433,3 +433,7 @@ figure.effect-ming:hover img { opacity: 0.4; }
     width: 100%;
     height: 170px;
   }
+  .categorias-places img{
+    width: 100%;
+    height: 190px !important;
+  }
