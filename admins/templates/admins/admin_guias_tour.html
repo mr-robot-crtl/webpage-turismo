@@ -1,0 +1,53 @@
+{% extends 'core/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+
+<section class="admin-servicios">
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title">Lista de Guias</h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        {% for g in guias %}
+        {% if g %}
+  
+        <tr>
+          <td> {{g.name}}</td>
+          <td> <img src="{{ g.picture.url }}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td>{{g.decriptions}}</td>
+          <td><a class="btn btn-primary btn-xs" href="{% url 'update-guia' g.id  %}"><i class="fa-solid fa-pen"></i></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'delete-guia' g.id  %}"><i class="fa-solid fa-trash-can"></i></a></td>
+  
+        </tr>
+        {%else%}
+        <br><br><br>
+        <h1>No hay Guias resgistrados</h1>
+        {% endif %}
+        {% endfor %}
+      </table>
+    </div>
+
+      <!-- add servicio floating button -->
+  <a href="/admin-add-guias" class="float">
+    <i class="fa fa-plus my-float"></i>
+    </a>
+    
+  </div>
+
+</section>
+
+{% endblock content %}

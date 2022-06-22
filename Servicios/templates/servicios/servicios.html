@@ -17,11 +17,12 @@
                 <div><img class="img" src="{{p.place_image.url}}" alt="servicio pic"/></div>
                 <div class="serv-conten">
                   <div class="name"><span>{{p.name}}</span></div>
-                  <div class="detail"><a href="{% url 'detail' p.id  %} ">{{p.detail_place_tour}}</a></div>
-                  <div class="detail"><h5>Categoria: <span class="price-menor">{{p.category}}</span></h5></div>
+                 
+                  <div class="detail"><h5>Categoria: <span class="price-menor">{{p.place.category}}</span></h5></div>
                   <div class="price">
                     <div><h5>Price: {{p.price}} <span class="price-menor">/ Menores {{menor_price}}</span> </h5></div>
                   </div>
+                  <div class="ver-detail"><a href="{% url 'detail' p.id  %} ">Ver detalles <i class="fa-solid fa-eye"></i></a></div>
                   <div class="add-cart" ><a href="{% url 'add-to-cart' p.id  %}">
                       <span class="">Add in cart</span></a>
                   </div>
@@ -66,7 +67,7 @@
           <div class="name-guia">
             <div class="team-classic-caption">
               <p>{{g.decriptions}}</p>
-              <h5><a class="team-classic-title" href="#">{{g.name}}</a></h5>
+              <h5 id="name-id-guia"><a class="team-classic-title" href="#">{{g.name}}</a></h5>
               <p class="team-classic-job-position">Guia Profesional</p>
             </div>
           </div>

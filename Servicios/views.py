@@ -184,12 +184,13 @@ def home_view(request):
     servicios=models.Place_Tour.objects.all()
     guiass=models.Guia_tour.objects.all()
     menor_price=0
+    for p in servicios:
+            menor_price=p.price/2
     if 'servicio_ids' in request.COOKIES:
         servicio_ids = request.COOKIES['servicio_ids']
         counter=servicio_ids.split('|')
         servicio_count_in_cart=len(set(counter))
-    for p in servicios:
-        menor_price=p.price/2
+        
     else:
         servicio_count_in_cart=0
     if request.user.is_authenticated:

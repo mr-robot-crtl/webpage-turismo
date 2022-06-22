@@ -1,0 +1,42 @@
+{% extends 'core/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+<section class="admin-add-servicios">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>ADD PLACES</p>
+        </div>
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field  placeForm.name class="form-control" placeholder="Name" %}
+              </div>
+              <div class="form-group">
+                {% render_field  placeForm.lugar_image class="form-control" placeholder="image" %}
+              </div>
+              <div class="form-group">
+                {% render_field  placeForm.descriptions class="form-control" placeholder="descriptions" %}
+              </div>
+              <div class="form-group">
+                {% render_field  placeForm.category class="form-control" placeholder="category" %}
+              </div>
+            
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</section>
+
+{% endblock content %}

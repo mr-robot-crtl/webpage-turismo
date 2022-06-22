@@ -35,25 +35,40 @@
 color: #706a6a;
 text-transform: none;
 }
-.servicio .add-cart{
+/*add to cart*/
+.add-cart{
   text-align: center;
-  padding-bottom: 20px;
-}
-.fa-children {
-  font-size: 25px;
+  padding: 15px;
+  background: #a5f9b7;
+  border-radius: 10%;
 }
 
-.fa-child-reaching {
-  font-size: 25px;
-}
 /*Detail*/
 .detail-servicio img {
   width: 100%;
   border-radius: 3%;
+}
+.ver-detail{
+  padding-bottom: 20px;
+}
+.ver-detail a{
+  color: #4169e1 !important;
   
+  text-transform: none;
+}
+.ver-detail a:hover{
+  color: #43ee68 !important;
+}
+.detail-sec_three div{
+padding-bottom: 15px;
 }
 /*Guia tour*/
 .name-guia{
   margin-bottom: 100px;
 
 }
+
+
+
+/*carousel*/
+
