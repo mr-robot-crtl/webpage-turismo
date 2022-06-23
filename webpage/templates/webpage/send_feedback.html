@@ -2,25 +2,36 @@
 {% load static %}
 {% load widget_tweaks %}
 {% block content %}
-<section id="banner2" data-stellar-background-ratio="0.5">
+
+<section id="banner" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
 </section>
-<br><br><br><br><br>
-<section>
-  <div class="container">
+
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-md-5">
+          <div class="img-signup"><img src="{% static 'webpage/images/tarde-aventura.jpg' %}" alt=""></div><br> 
+        </div>
+        <div class="col-md-7">
+          <div class="title-register"><h2>comentarios</h2></div>
+          <div class="formulario-login ">
     <div class="form-feedback">
-      <h3 class='alert alert-success'>¡Envíenos sus valiosos comentarios!</h3>
+      <h3 class='alert alert-success'>¡Envianos tu comentarios!</h3>
       <form method="post">
         {% csrf_token %}
         <div class="form-group">
-          <label>Nombres<span class="required">*</span></label>
+          <label>Nombre<span class="required">*</span></label>
           {% render_field feedbackForm.name class="form-control" %}
         </div>
         <div class="form-group">
           <label>Tu comentario <span class="required">*</span></label>
-          <textarea class="form-control" rows="10" cols="50" {% render_field feedbackForm.feedback id="field5" %} >Aqui</textarea>
+          <textarea class="form-control" rows="8" cols="40" {% render_field feedbackForm.feedback id="field5" %}></textarea>
         </div>
-        <input type="submit" value="Send Feedback" />
+        <center>
+        <input type="submit" value="ENVIAR" class='btn btn-danger btn-lg'>
       </form>
     </div>
   </div>
