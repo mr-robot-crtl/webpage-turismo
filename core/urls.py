@@ -19,7 +19,6 @@ urlpatterns = [
     
     path('', include('login.urls')),
     
-    path('tours/', include('Tours.urls')),
     path('places/', include('Places.urls')),
 
 

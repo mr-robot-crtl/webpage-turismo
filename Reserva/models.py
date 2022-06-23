@@ -14,7 +14,7 @@ class Orders(models.Model):
     cliente=models.ForeignKey(Cliente, on_delete=models.CASCADE,null=True)
     place_tour=models.ForeignKey(Place_Tour, on_delete=models.CASCADE,null=True)
     email = models.CharField(max_length=50,null=True)
-    address = models.CharField(max_length=500,null=True)
+
     mobile = models.CharField(max_length=20,null=True)
 
     fecha = models.DateField(auto_now = False)

@@ -313,5 +313,9 @@ def view_feedback_view(request):
     feedbacks=Feedback.objects.all().order_by('-id')
     return render(request,'admins/view_feedback.html',{'feedbacks':feedbacks})
 
+def view_feedback_view_home(request):
+    feedbacks=Feedback.objects.all().order_by('-id')
+    return render(request,'webpage/home.html',{'feedbacks':feedbacks})
+
 
 

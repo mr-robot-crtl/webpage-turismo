@@ -34,7 +34,6 @@ def cliente_address_view(request):
             # these thing can be changes
             email = addressForm.cleaned_data['Email']
             mobile=addressForm.cleaned_data['Mobile']
-            address = addressForm.cleaned_data['Address']
             fecha = addressForm.cleaned_data['fecha']
             num_a = addressForm.cleaned_data['num_a']
             num_n = addressForm.cleaned_data['num_n']
@@ -55,7 +54,6 @@ def cliente_address_view(request):
      
             response.set_cookie('email',email)
             response.set_cookie('mobile',mobile)
-            response.set_cookie('address',address)
             response.set_cookie('fecha',fecha)
             response.set_cookie('num_a',num_a)
             response.set_cookie('num_n',num_n)

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #COLOCAAR EL NAME DE LAS APP PARA QUE CORRA TODAS SUS FUNCIONES
     'webpage',
-    'Tours',
     'Places',
     'Clima',
     'servicios',

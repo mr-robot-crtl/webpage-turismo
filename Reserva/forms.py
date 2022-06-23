@@ -7,7 +7,6 @@ class AddressForm(forms.Form):
     fecha= forms.DateField()
     num_a= forms.IntegerField()
     num_n= forms.IntegerField()
-    Address = forms.CharField(max_length=500)
 
 #for updating status of order
 class OrderForm(forms.ModelForm):
