@@ -4,7 +4,7 @@ from re import S
 from telnetlib import SE
 from tkinter import CASCADE
 from tkinter.tix import Tree
-from typing_extensions import Required
+
 from unicodedata import category
 from django.db import models
 from Places.models import Category_Place, Place

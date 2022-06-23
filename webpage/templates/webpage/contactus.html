@@ -2,21 +2,31 @@
 {% extends 'core/base2.html' %}
 {% load static %}
 {% block content %}
-<section id="banner2" data-stellar-background-ratio="0.5">
+<section id="banner" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
 </section>
-<section>
-  <div class="container">
-    <div class="form-border">
+
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-md-5">
+          <div class="img-signup"><img src="{% static 'webpage/images/tarde-aventura.jpg' %}" alt=""></div><br> 
+        </div>
+        <div class="col-md-7">
+          <div class="title-register"><h2>contactanos</h2></div>
+          <div class="formulario-login ">
+    <div class="form-feedback">
       <center>
-        <h3 class='alert alert-success'>¡Envíenos sus valiosos comentarios!</h3>
+        <h3 class='alert alert-success'>¡Digamos sus dudas!</h3>
       
           <form method="POST">
             {% csrf_token %}
             <table class="form-contactus">
                 <div>{{ form.as_table}}</div>
             </table>
-            <input type="submit" value="Send Message" class='btn btn-danger btn-lg'>
+            <input type="submit" value="Enviar" class='btn btn-danger btn-lg'>
           </form>
         
       </center>
