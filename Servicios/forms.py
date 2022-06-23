@@ -5,7 +5,7 @@ from . import models
 class PlaceTourForm(forms.ModelForm):
     class Meta:
         model=models.Place_Tour
-        fields=['name','price','description','place_image']
+        fields=['name','price','price_menor' ,'description','place_image','place']
 
 class GuiaTourForm(forms.ModelForm):
     class Meta:

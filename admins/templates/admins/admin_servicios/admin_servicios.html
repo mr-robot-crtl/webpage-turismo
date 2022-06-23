@@ -18,6 +18,7 @@
             <th>Name</th>
             <th>Image</th>
             <th>Price</th>
+            <th>Place</th>
             <th>Description</th>
             <th>Update</th>
             <th>Delete</th>
@@ -28,8 +29,9 @@
   
         <tr>
           <td> {{p.name}}</td>
-          <td> <img src="{{ p.servicio_image.url }}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td> <img src="{{ p.place_image.url }}" alt="Profile Pic" height="40px" width="40px" /></td>
           <td>{{p.price}}</td>
+          <td>{{p.place}}</td>
           <td>{{p.description}}</td>
           <td><a class="btn btn-primary btn-xs" href="{% url 'update-servicio' p.id  %}"><i class="fa-solid fa-pen"></i></a></td>
           <td><a class="btn btn-danger btn-xs" href="{% url 'delete-servicio' p.id  %}"><i class="fa-solid fa-trash-can"></i></a></td>

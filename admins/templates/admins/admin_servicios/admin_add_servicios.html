@@ -5,16 +5,13 @@
 <section id="banner2" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
 </section>
-
-
-<section class="admin-update-servicio">
+<section class="admin-add-servicios">
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="container register-form">
       <div class="form">
         <div class="note">
-          <p>Actualizar detalles del servicio
-          </p>
+          <p>AGREGAR SERVICIOS</p>
         </div>
         <div class="form-content">
           <div class="row">
@@ -25,6 +22,7 @@
               <div class="form-group">
                 {% render_field servicioForm.description class="form-control" placeholder="Description" %}
               </div>
+  
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -33,15 +31,19 @@
               <div class="form-group">
                 {% render_field servicioForm.servicio_image class="form-control" placeholder="servicio_image" %}
               </div>
+              <div class="form-group">
+                {% render_field servicioForm.place class="form-control" placeholder="place" %}
+              </div>
   
   
             </div>
           </div>
-          <button type="submit" class="btnSubmit">Update</button>
+          <button type="submit" class="btnSubmit">Agregar</button>
         </div>
       </div>
     </div>
   </form>
+
 </section>
 
 {% endblock content %}

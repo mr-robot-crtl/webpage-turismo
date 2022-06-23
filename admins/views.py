@@ -56,11 +56,12 @@ def adminclick_view(request):
         return HttpResponseRedirect('afterlogin')
     return HttpResponseRedirect('adminlogin')
 
+##################################### CLIENTE ##########################################
 # admin view cliente table
 @login_required(login_url='adminlogin')
 def view_cliente_view(request):
     clientes=Cliente.objects.all()
-    return render(request,'admins/view_cliente.html',{'clientes':clientes})
+    return render(request,'admins/admin_cliente/view_cliente.html',{'clientes':clientes})
 
 # admin delete cliente
 @login_required(login_url='adminlogin')
@@ -70,7 +71,6 @@ def delete_cliente_view(request,pk):
     user.delete()
     cliente.delete()
     return redirect('view-cliente')
-
 
 @login_required(login_url='adminlogin')
 def update_cliente_view(request,pk):
@@ -88,14 +88,14 @@ def update_cliente_view(request,pk):
             user.save()
             clienteForm.save()
             return redirect('view-cliente')
-    return render(request,'admins/admin_update_cliente.html',context=mydict)
+    return render(request,'admins/admin_cliente/admin_update_cliente.html',context=mydict)
 
 ################################## GUIA TOUR #######################################
 # admin view the guias tour
 @login_required(login_url='adminlogin')
 def admin_guias_tour(request):
     guias=Guia_tour.objects.all()
-    return render(request,'admins/admin_guias_tour.html',{'guias':guias})
+    return render(request,'admins/admin_guias_tour/admin_guias_tour.html',{'guias':guias})
     
 # admin add guias by clicking on floating button
 @login_required(login_url='adminlogin')
@@ -106,7 +106,7 @@ def admin_add_guia_view(request):
         if guiaTourForm.is_valid():
             guiaTourForm.save()
         return HttpResponseRedirect('admin-guias-tour')
-    return render(request,'admins/admin_add_guias.html',{'guiaTourForm':guiaTourForm})
+    return render(request,'admins/admin_guias_tour/admin_add_guias.html',{'guiaTourForm':guiaTourForm})
 
 @login_required(login_url='adminlogin')
 def delete_guia_view(request,pk):
@@ -123,7 +123,7 @@ def update_guia_view(request,pk):
         if guiaTourForm.is_valid():
             guiaTourForm.save()
             return redirect('admin-guias-tour')
-    return render(request,'admins/admin_update_guia.html',{'guiaTourForm':guiaTourForm})
+    return render(request,'admins/admin_guias_tour/admin_update_guia.html',{'guiaTourForm':guiaTourForm})
 ################################## END #############################################
 
 ################################## MOVILIDAD #######################################
@@ -270,14 +270,13 @@ def update_detalle_place_view(request,pk):
             return redirect('admin-detalle-places')
     return render(request,'admins/admin_detalle_places/admin_update_detalle_places.html',{'detPlaceForm':detPlaceForm})
 
-######################################## END ##############################################
-
+######################################## SERVICIOS ##############################################
 
 # admin view the servicio
 @login_required(login_url='adminlogin')
 def admin_servicios_view(request):
     servicios=Place_Tour.objects.all()
-    return render(request,'admins/admin_servicios.html',{'servicios':servicios})
+    return render(request,'admins/admin_servicios/admin_servicios.html',{'servicios':servicios})
 # admin add servicio by clicking on floating button
 @login_required(login_url='adminlogin')
 def admin_add_servicio_view(request):
@@ -287,7 +286,7 @@ def admin_add_servicio_view(request):
         if servicioForm.is_valid():
             servicioForm.save()
         return HttpResponseRedirect('admin-servicios')
-    return render(request,'admins/admin_add_servicios.html',{'servicioForm':servicioForm})
+    return render(request,'admins/admin_servicios/admin_add_servicios.html',{'servicioForm':servicioForm})
 
 
 @login_required(login_url='adminlogin')
@@ -306,7 +305,7 @@ def update_servicio_view(request,pk):
         if servicioForm.is_valid():
             servicioForm.save()
             return redirect('admin-servicios')
-    return render(request,'admins/admin_update_servicio.html',{'servicioForm':servicioForm})
+    return render(request,'admins/admin_servicios/admin_update_servicio.html',{'servicioForm':servicioForm})
 
 # admin view the feedback
 @login_required(login_url='adminlogin')

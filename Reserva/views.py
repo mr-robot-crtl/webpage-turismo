@@ -49,21 +49,23 @@ def cliente_address_view(request):
                     servicios=Place_Tour.objects.all().filter(id__in = servicio_id_in_cart)
                     for p in servicios:
                         #total=(total+p.price)
-                        total=(num_a*p.price)+(num_n*p.price)
+                        total=(num_a*p.price)+(num_n*p.price_menor)
 
             response = render(request, 'pago/payment.html',{'total':total})
+     
             response.set_cookie('email',email)
             response.set_cookie('mobile',mobile)
             response.set_cookie('address',address)
             response.set_cookie('fecha',fecha)
             response.set_cookie('num_a',num_a)
-            response.set_cookie('num_b',num_n)
+            response.set_cookie('num_n',num_n)
             return response
     return render(request,'reserva/cliente_address.html',{'addressForm':addressForm,'servicio_in_cart':servicio_in_cart,'servicio_count_in_cart':servicio_count_in_cart})
 
 @login_required(login_url='clientelogin')
 @user_passes_test(is_cliente)
-def my_order_view(request):
+def my_order_view(request):  
+
     cliente=Cliente.objects.get(user_id=request.user.id)
     orders=Orders.objects.all().filter(cliente_id = cliente)
     ordered_servicios=[]

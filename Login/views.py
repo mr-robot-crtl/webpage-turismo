@@ -64,7 +64,7 @@ def download_invoice_view(request,orderID,servicioID):
         'orderStatus':order.status,
 
         'servicioName':servicio.name,
-        'servicioImage':servicio.servicio_image,
+        'servicioImage':servicio.place_image,
         'servicioPrice':servicio.price,
         'servicioDescription':servicio.description,
 
