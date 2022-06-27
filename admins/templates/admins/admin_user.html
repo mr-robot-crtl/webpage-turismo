@@ -1,0 +1,42 @@
+{% extends 'core/admin_base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="banner2" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+</section>
+<section class="view-cliente">
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title">Lista total de clientes
+        </h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>fisrt name</th>
+            <th>last name</th>
+            <th>staf</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        {% for u in users %}
+        <tr>
+          <td> {{u.username}}</td>
+          <td>{{u.email}}</td>
+          <td>{{u.first_name}}</td>
+          <td>{{u.last_name}}</td>
+          <td>{{u.is_staff}}</td>
+        
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}

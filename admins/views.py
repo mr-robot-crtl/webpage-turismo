@@ -63,6 +63,10 @@ def view_cliente_view(request):
     clientes=Cliente.objects.all()
     return render(request,'admins/admin_cliente/view_cliente.html',{'clientes':clientes})
 
+@login_required(login_url='adminlogin')
+def view_user_view(request):
+    users=User.objects.all()
+    return render(request,'admins/admin_user.html',{'users':users})
 # admin delete cliente
 @login_required(login_url='adminlogin')
 def delete_cliente_view(request,pk):

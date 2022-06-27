@@ -9,6 +9,7 @@ urlpatterns = [
     path('view-feedback', views.view_feedback_view,name='view-feedback'),
     path('adminclick', views.adminclick_view),
     
+     path('view-user', views.view_user_view,name='view-user'),
     path('view-cliente', views.view_cliente_view,name='view-cliente'),
     path('delete-cliente/<int:pk>', views.delete_cliente_view,name='delete-cliente'),
     path('update-cliente/<int:pk>', views.update_cliente_view,name='update-cliente'),
